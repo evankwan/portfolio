@@ -1,0 +1,58 @@
+.blogPostsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.blogIntroText {
+  @include setFont(2rem, normal, $darkGrey, 1.5px);
+
+  margin-bottom: 40px;
+}
+
+.blogPostContainer {
+  @include setFlex(column, space-between, center);
+
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px $darkGrey;
+  flex-basis: 50%;
+  height: 250px;
+  transition: .3s ease;
+  width: 220px;
+}
+
+.blogPostContainer:hover {
+  box-shadow: 2px 2px 4px $darkGrey;
+}
+
+.blogImageContainer {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.blogImageContainer img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blogPostTitle {
+  @include setFlex(column, center, center);
+  @include setFont(2rem, normal, $darkGrey, default);
+
+  flex-basis: 50%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.moreToCome {
+  @include setFlex(column, center, center);
+  @include setFont(2rem, normal, $mainColor, default);
+
+  background-color: $darkGrey;
+  border-radius: 10px;
+  flex-basis: 100%;
+  padding: 0 20px;
+  text-align: center;
+}

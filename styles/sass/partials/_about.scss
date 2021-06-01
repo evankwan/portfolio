@@ -1,0 +1,127 @@
+.resumeBreak {
+  background-color: $mainColor;
+  border-radius: 50px;
+  height: 100px;
+  margin: 40px 0;
+  position: relative;
+  width: 125%;
+  z-index: 20;
+}
+
+.resumeBreakList {
+  @include setFlex(row, flex-start, center);
+
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.resumeBreakListItem {
+  @include setFont(1.8rem, bold, $darkGrey, 1.1px);
+
+  margin: 0 10px;
+  padding: 10px 40px;
+
+  .resumeBreakLink {
+    color: $darkGrey;
+    position: relative;
+    text-transform: uppercase;
+    transition: $standardTransition;
+
+    &::before {
+      background-color: $darkGrey;
+      bottom: -5px;
+      content: '';
+      display: block;
+      height: 2px;
+      right: 0;
+      position: absolute;
+      transition: $standardTransition;
+      width: 100%;
+    }
+
+    &:hover::before {
+      background-color: $white;
+      width: 0;
+    }
+  }
+}
+
+.symbolsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 50px;
+  margin: 40px 0;
+}
+
+.symbolContainer:hover > .iconHeading {
+  letter-spacing: 5px;
+  transform: translateX(-20px);
+}
+
+.iconContainer {
+  background-color: $mainColorLight;
+  border-radius: 10px;
+  height: $aboutIconSize;
+  margin-bottom: 20px;
+  padding: 5px;
+  width: $aboutIconSize;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.iconHeading {
+  @include setFont(3rem, bold, $darkGrey, 1.5px);
+
+  margin-bottom: 20px;
+  position: relative;
+  transition: $standardTransition;
+
+  &::before {
+    background-color: transparent;
+    bottom: -5px;
+    content: '';
+    display: block;
+    height: 2px;
+    right: 0;
+    position: absolute;
+    transition: $standardTransition;
+    width: 100%;
+  }
+}
+
+.iconText {
+  @include setFont(1.8rem, normal, $darkGrey, 1.5px);
+
+  line-height: 1.6;
+}
+
+.aboutFloatingBox {
+  background-color: $mainColor;
+  float: right;
+  margin-bottom: 20px;
+  position: relative;
+  right: -50px;
+  width: 350px;
+}
+
+.floatingBoxList {
+  padding: 0 50px;
+}
+
+.floatingBoxListItem {
+  margin: 50px 0;
+}
+
+.floatingContactHeading {
+  @include setFont(2rem, bold, $darkGrey, 1px);
+
+  margin: 10px 0;
+}
+
+.floatingContactInfo {
+  @include setFont(1.6rem, normal, $darkGrey, 1px);
+}

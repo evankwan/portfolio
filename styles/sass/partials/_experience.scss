@@ -1,0 +1,32 @@
+.roleDetails {
+  border-bottom: 1px solid $white;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+.roleDetails:last-child {
+  border-bottom: none;
+}
+
+.experienceTitle {
+  @include setFont(3.5rem, bold, $mainColor, 1.5px);
+
+  margin-bottom: 20px;
+}
+
+.experienceInfo {
+  @include setFont(2rem, normal, $mainColorLight, 1.5px);
+
+  margin-bottom: 20px;
+}
+
+.experiencePoints {
+  padding: 0 20px;
+}
+
+.experienceItem {
+  @include setFont(2rem, normal, $white, 1.5px);
+
+  list-style-type: square;
+  margin: 20px 0;
+}

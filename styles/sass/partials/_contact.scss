@@ -1,0 +1,63 @@
+.contactContainer {
+  @include setFlex(row, space-between, center);
+
+  background-color: $darkGrey;
+  border-bottom: 2px solid $white;
+  height: 100px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.contactDetailContainer {
+  @include setFont(2rem, bold, $white, 2px);
+
+  flex-basis: 80%;
+}
+
+.contactMethodContainer {
+  @include setFont(2rem, normal, $mainColor, 1.5px);
+
+  flex-basis: 20%;
+  text-align: right;
+}
+
+.contactForm {
+  @include setFlex(column, space-between, center);
+
+  margin: 40px auto 0;
+  row-gap: 10px;
+  width: 100%;
+}
+
+.nameField,
+.emailField,
+.messageField,
+.formSubmitButton {
+  @include setFont(2rem, normal, $darkGrey, default);
+
+  background-color: $white;
+  border: none;
+  border-bottom: 1px solid $darkGrey;
+  line-height: 1.6;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.messageField {
+  // border: 1px solid $darkGrey;
+  // border-radius: 10px;
+  resize: none;
+}
+
+.formSubmitButton {
+  background-color: $mainColor;
+  border: 1px solid $mainColor;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formSubmitButton:hover {
+  border-color: $darkGrey;
+}

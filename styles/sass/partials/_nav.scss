@@ -1,0 +1,134 @@
+.fixedNavMenu {
+  @include setFlex(column, space-between, center);
+
+  background-color: $darkGrey;
+  height: 100vh;
+  padding: 70px 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 37.5%;
+}
+
+.menuPageNumber,
+.navMenu,
+.navSocialList {
+  width: 70%;
+}
+
+.menuPageNumber {
+  @include setFont(2.4rem, bold, $white, 2px);
+
+  padding: 5px 10px;
+}
+
+.currentPageNumber {
+  color: $mainColor;
+}
+
+.navTitle {
+  @include setFont(1.8rem, normal, $white, 3px);
+
+  text-transform: uppercase;
+
+  .navTitleLink {
+    border: 1px solid transparent;
+    color: $white;
+    padding: 5px 10px;
+    position: relative;
+    transition: $doubleTransition;
+
+    &:focus {
+      border: 1px solid $mainColor;
+      outline: none;
+    } 
+  }
+
+  .navTitleLink:hover {
+    color: $mainColor;
+  }
+
+  .navTitleLink::before {
+    background-color: $white;
+    bottom: -5px;
+    content: '';
+    display: block;
+    height: 2px;
+    right: 0;
+    position: absolute;
+    transition: $standardTransition;
+    width: 100%;
+  }
+
+  .navTitleLink:hover::before {
+    background-color: $mainColor;
+    width: 0;
+  }
+}
+
+.navMenu {
+  @include setFlex(column, flex-start, flex-start);
+  flex-basis: 60%;
+}
+
+.navList {
+  margin: 50px 0;
+  width: 100%;
+
+  .navListItem {
+    @include setFont(1.8rem, normal, $white, 3px);
+
+    margin: 15px 0;
+    width: 100%;
+  }
+
+  .navListItemLink {
+    border: 1px solid transparent;
+    color: $white;
+    padding: 5px 10px;
+    transition: .3s ease;
+    width: 100%;
+
+    &:hover {
+      color: $mainColor;
+    }
+
+    &:focus {
+      border: 1px solid $mainColor;
+      outline: none;
+    }
+
+    &.activeNavLink {
+      background-color: $darkGrey;
+      color: $mainColor;
+      width: 100%;
+    }
+  }
+}
+
+.navSocialList {
+  @include setFlex(row, flex-start, center);
+
+  padding: 5px 10px;
+
+  .navSocialListItem {
+    @include setFlex(column, center, center);
+
+    border: 1px solid $white;
+    border-radius: 5px;
+    height: 40px;
+    margin: 5px;
+    padding: 5px;
+    width: 40px;
+  }
+
+  .navSocialLink {
+    @include setFont(2rem, normal, $white, 1px);
+
+    transition: .3s ease;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+}

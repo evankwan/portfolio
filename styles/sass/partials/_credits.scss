@@ -1,0 +1,8 @@
+.credit {
+  @include setFont(2rem, normal, $darkGrey, 1.5px);
+}
+
+.creditLink {
+  color: $darkGrey;
+  text-decoration: underline;
+}

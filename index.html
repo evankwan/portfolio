@@ -1,11 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evan Kwan</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://kit.fontawesome.com/7627ee882a.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Evan Kwan | Home</title>
 </head>
 <body>
-    <h1>Fantastic work coming soon!</h1>
+  <!-- Header -->
+  <header class="mainHeader">
+    <div class="wrapper">
+      <div class="mainHeaderContainer">
+        <h1 class="pageTitle">
+          <span class="pageTitleBlock">Hello,</span>
+          <span class="pageTitleBlock">I'm Evan</span>
+          <span class="pageTitleBlock">Kwan</span>
+        </h1>
+        <div class="headerImageContainer">
+          <img src="./assets/headshot.jpg" alt="Headshot of me, Evan Kwan">
+        </div>
+        <div class="scrollArrowContainer">
+          <i class="fas fa-chevron-down scrollArrow"></i>
+        </div>
+        </div>
+      </div>
+  </header>
+  <!-- end header -->
+
+  <!-- Fixed Nav Menu -->
+  <nav class="fixedNavMenu">
+    <div class="menuPageNumber">
+      <span id="currentPageNumber" class="currentPageNumber">01</span>
+      <span class="paginationSeparator">/</span> 
+      <span class="paginationSeparator">07</span>
+    </div>
+  
+    <div class="navMenu">
+      <h4 class="navTitle">
+        <a href="#home" class="navTitleLink">Evan Kwan</a>
+      </h4>
+      <ul class="navList">
+        <li class="navListItem">
+          <a href="#home" class="navListItemLink activeNavLink">Home</a>
+        </li>
+        <li class="navListItem">
+          <a href="#about" class="navListItemLink">About</a>
+        </li>
+        <li class="navListItem">
+          <a href="#projects" class="navListItemLink">Projects</a>
+        </li>
+        <li class="navListItem">
+          <a href="#skills" class="navListItemLink">Skills</a>
+        </li>
+        <li class="navListItem">
+          <a href="#experience" class="navListItemLink">Experience</a>
+        </li>
+        <li class="navListItem">
+          <a href="#blog" class="navListItemLink">Blog</a>
+        </li>
+        <li class="navListItem">
+          <a href="#contact" class="navListItemLink">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- nav social links -->
+    <ul class="navSocialList">
+      <li class="navSocialListItem">
+        <a href="https://github.com/evankwan" class="navSocialLink" target="_blank" rel="noreferrer noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li class="navSocialListItem">
+        <a href="https://www.linkedin.com/in/evanyuekwan/" class="navSocialLink" target="_blank" rel="noreferrer noopener">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+      <li class="navSocialListItem">
+        <a href="https://twitter.com/evanyuekwan" class="navSocialLink" target="_blank" rel="noreferrer noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  <!-- end nav -->
+
+  <!-- about section -->
+  <section id="about">
+    <div class="wrapper aboutSection">
+      <div class="sectionWrapper clearfix">
+        <h2 class="sectionTitle">About Me</h2>
+        <p class="sectionStatement">I bring the hard work, determination, and relentlessness from my software sales experience to the world of development.</p>
+        <p id="summary" class="sectionText">I am a front-end software developer proficient in HTML5, CSS3, JavaScript, and React. My experience working in customer-facing roles has really allowed me to take the end-users experience into consideration when building my applications.</p>
+        <p id="summary" class="sectionText">My passion for building sites and apps has helped push me to continuously learn new skills and add new technologies to my toolbag. As a lifelong learner, the endless possibilities of web development excites me and confirms that I am in the right place.</p>
+        <p id="summary" class="sectionText">Outside of my dev work, my life is filled with consuming everything Star Wars, weekly trips to the tennis courts, cooking and eating new food, and being miserable from yet another disappointing Leafs season.</p>
+
+        <!-- resume and projects box-->
+        <div class="resumeBreak">
+          <ul class="resumeBreakList">
+            <li class="resumeBreakListItem">
+              <a href="#experience"  class="resumeBreakLink">Download Resume</a>
+            </li>
+            <li class="resumeBreakListItem">
+              <a href="#projects" class="resumeBreakLink">My Work</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="symbolsContainer">
+          <div class="symbolContainer">
+            <div class="iconContainer">
+              <img src="./assets/x-wing.svg" alt="X Wing Icon by Ben Davis from the Noun Project">
+            </div>
+            <h3 class="iconHeading">Star Wars</h3>
+            <p class="iconText">Currently working my way through the current Star Wars Canon timeline.</p>
+          </div>
+          <div class="symbolContainer">
+            <div class="iconContainer">
+              <img src="./assets/tennis.svg" alt="Tennis by JunGSa from the Noun Project">
+            </div>
+            <h3 class="iconHeading">Tennis</h3>
+            <p class="iconText">Always loved tennis, but my skill does not match my love of the game</p>
+          </div>
+          <div class="symbolContainer">
+            <div class="iconContainer">
+              <img src="./assets/wok.svg" alt="Wok by Template from the Noun Project">
+            </div>
+            <h3 class="iconHeading">Cooking</h3>
+            <p class="iconText">Adventureous home cook who specializes in Mac & Cheese and risotto</p>
+          </div>
+          <div class="symbolContainer">
+            <div class="iconContainer">
+              <img src="./assets/maple-leaf.svg" alt="Maple Leaf by mynamepong from the Noun Project">
+            </div>
+            <h3 class="iconHeading">Leafs Fan</h3>
+            <p class="iconText">Every season begins full of excitement and ends with total despair</p>
+          </div>
+        </div>
+
+        <h3 class="subSectionHeading">My Story</h3>
+        <p id="summary" class="sectionText">After four years in sales, I realized that staying in sales was no longer my long-term goal, and I wanted to find a role that kept me more engaged throughout the day.</p>
+        <p id="summary" class="sectionText">I was fortunate to have had the opportunity to sell to so many incredible startup founders across Canada, which led to my love of the tech world. Learning how to code and build my own products was something that always appealed to me, so when I decided to make a career change, jumping into web development was an easy choice.</p>
+        <p id="summary" class="sectionText">In January 2021, after a couple of months of part-time learning and research, I made the decision to leave my Account Executive role and pursue coding full-time.</p>
+        <div class="aboutFloatingBox">
+          <ul class="floatingBoxList">
+            <li class="floatingBoxListItem">
+              <h5 class="floatingContactHeading">Role</h5>
+              <p class="floatingContactInfo">Software/Web Developer</p>
+            </li>
+            <li class="floatingBoxListItem">
+              <h5 class="floatingContactHeading">Email</h5>
+              <p class="floatingContactInfo">evanyuekwan@gmail.com</p>
+            </li>
+            <li class="floatingBoxListItem">
+              <h5 class="floatingContactHeading">Phone</h5>
+              <p class="floatingContactInfo">(905) 808-0802</p>
+            </li>
+          </ul>
+        </div>
+        <p id="summary" class="sectionText">I enrolled in Juno College's Accelerated Web Development and JavaScript courses, and then their immersive Web Development Bootcamp, where I learned how to create accessible and responsive sites and apps using React, SCSS, JavaScript, HTML5 and CSS3.</p>
+        <p id="summary" class="sectionText">Learning at Juno was incredibly rewarding as I got to learn from so many brilliant mentors and cohort-mates. The skills and tools that I picked up during the bootcamp have really helped me see the endless possibilities of what I can build. There is so much to learn with web development and that could not excite me more, because <em>I am just getting started.</em></p>
+      </div>
+    </div>    
+  </section>
+  <!-- end about -->
+  
+  <!-- projects -->
+  <section id="projects">
+    <div class="wrapper">
+      <div class="sectionWrapper">
+        <h2 class="sectionTitle">Projects</h2>
+        <div class="projectsContainer">
+          <div class="positiveVibesBoard projectPreview">
+            <div class="projectDetails">
+              <h3 class="projectTitle">Positive Vibes Board</h3>
+              <p class="projectDescription">A positivity and motivational message board</p>
+              <p class="projectStack">Built using React and Firebase</p>
+            </div>
+          </div>
+          <div class="pokemonBlackjack projectPreview">
+            <div class="projectDetails">
+              <h3 class="projectTitle">Pokémon Blackjack</h3>
+              <p class="projectDescription">A Pokémon-themed blackjack game</p>
+              <p class="projectStack">Built using React, the PokéAPI, and the Deck of Cards API</p>
+            </div>
+          </div>
+          <div class="cratedigger projectPreview">
+            <div class="projectDetails">
+              <h3 class="projectTitle">Cratedigger</h3>
+              <p class="projectDescription">A Music Recommendation App that gives you recommendations based on your chosen genre or favourite artist</p>
+              <p class="projectStack">Built using JavaScript, SCSS, the Last.fm API, and the Giphy API</p>
+            </div>
+          </div>
+          <div class="captured projectPreview">
+            <div class="projectDetails">
+              <h3 class="projectTitle">Captured</h3>
+              <p class="projectDescription">A PSD-conversion for Juno College's Web Development Bootcamp.</p>
+              <p class="projectStack">Built using HTML, SCSS, and JavaScript</p>
+            </div>
+          </div>
+          <div class="scattergories projectPreview">
+            <div class="projectDetails">
+              <h3 class="projectTitle">Scattergories</h3>
+              <p class="projectDescription">A static Scattergories game board to play with friends, family, or colleagues over Zoom.</p>
+              <p class="projectStack">Built using HTML, CSS, and JavaScript</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- end projects -->
+
+  <!-- skills -->
+  <section id="skills">
+    <div class="wrapper">
+      <div class="sectionWrapper">
+        <h2 class="sectionTitle">Skills</h2>
+        <div class="skillsContainer">
+          <div class="skillContainer skillHTML">
+            <div class="skillIconContainer">
+              <i class="devicon-html5-plain"></i>
+            </div>
+            <h4 class="skillTitle">HTML</h4>
+          </div>
+          <div class="skillContainer skillCSS">
+            <div class="skillIconContainer">
+              <i class="devicon-css3-plain"></i>
+            </div>
+            <h4 class="skillTitle">CSS</h4>
+          </div>
+          <div class="skillContainer skillJavaScript">
+            <div class="skillIconContainer">
+              <i class="devicon-javascript-plain"></i>
+            </div>
+            <h4 class="skillTitle">JavaScript</h4>
+          </div>
+          <div class="skillContainer skillReact">
+            <div class="skillIconContainer">
+              <i class="devicon-react-original"></i>
+            </div>
+            <h4 class="skillTitle">React</h4>
+          </div>
+          <div class="skillContainer skillFirebase">
+            <div class="skillIconContainer">
+              <i class="devicon-firebase-plain"></i>
+            </div>
+            <h4 class="skillTitle">Firebase</h4>
+          </div>
+          <div class="skillContainer skillSass">
+            <div class="skillIconContainer">
+              <i class="devicon-sass-original"></i>
+            </div>
+            <h4 class="skillTitle">Sass</h4>
+          </div>
+          <div class="skillContainer skillJQuery">
+            <div class="skillIconContainer">
+              <i class="devicon-jquery-plain"></i>
+            </div>
+            <h4 class="skillTitle">jQuery</h4>
+          </div>
+          <div class="skillContainer skillResponsive">
+            <div class="skillIconContainer">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <h4 class="skillTitle">Responsive Design</h4>
+          </div>
+          <div class="skillContainer skillAccessible">
+            <div class="skillIconContainer">
+              <i class="fas fa-universal-access"></i>
+            </div>
+            <h4 class="skillTitle">Accessible Design</h4>
+          </div>
+          <div class="skillContainer skillRest">
+            <div class="skillIconContainer">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h4 class="skillTitle">RESTful APIs</h4>
+          </div>
+          <div class="skillContainer skillGit">
+            <div class="skillIconContainer">
+              <i class="devicon-git-plain"></i>
+            </div>
+            <h4 class="skillTitle">Git</h4>
+          </div>
+          <div class="skillContainer skillGitHub">
+            <div class="skillIconContainer">
+              <i class="devicon-github-original"></i>
+            </div>
+            <h4 class="skillTitle">GitHub</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end skills -->
+
+  <!-- experience -->
+  <section id="experience" class="alternateBackground">
+    <div class="wrapper">
+      <div class="sectionWrapper">
+        <h2 class="sectionTitle">My Experience</h2>
+        <div class="roleDetails">
+          <h3 class="experienceTitle">Account Executive</h3>
+          <p class="experienceInfo">Nexonia, March 2020 to January 2021</p>
+          <ul class="experiencePoints">
+            <li class="experienceItem">
+              Achieved 125% of quota in December 2020
+            </li>
+            <li class="experienceItem">
+              Closed $115,000 in new business selling to finance and accounting executive
+            </li>
+            <li class="experienceItem">
+              Owned the full sales cycle from prospecting to close
+            </li>
+          </ul>
+        </div>
+        <div class="roleDetails">
+          <h3 class="experienceTitle">Account Executive</h3>
+          <p class="experienceInfo">Loopio, October 2018 to December 2019</p>
+          <ul class="experiencePoints">
+            <li class="experienceItem">
+              Closed $180,000 in new business
+            </li>
+            <li class="experienceItem">
+              Led engaging product demos and executed complex global trials with multiple enterprise prospects
+            </li>
+            <li class="experienceItem">
+              Led cold-calling training and mentored BDRs to help them improve their sales skills
+            </li>
+          </ul>
+        </div>
+        <div class="roleDetails">
+          <h3 class="experienceTitle">Business Development Rep</h3>
+          <p class="experienceInfo">Google / CDI, December 2016 to September 2018</p>
+          <ul class="experiencePoints">
+            <li class="experienceItem">
+              Sourced $2.2 Million USD in new business ad sales across 66 total accounts
+            </li>
+            <li class="experienceItem">
+              Consistently led North American team with a lifetime quota attainment over 108%
+            </li>
+            <li class="experienceItem">
+              Held over 1,250 qualifying conversations with C-Suite executives and sourced over 500 opportunities
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!-- end experience -->
+
+  <!-- blog -->
+  <section id="blog">
+    <div class="wrapper">
+      <div class="sectionWrapper">
+        <h2 class="sectionTitle">Blog</h2>
+        <p class="blogIntroText">I write sometimes on Medium:</p>
+        <div class="blogPostsContainer">
+          <a href="https://evanyuekwan.medium.com/from-software-sales-to-software-development-973fd2712212" class="blogPostContainer" target="_blank" rel="norefferer noopener">
+            <div class="blogImageContainer">
+              <img src="./assets/blogPostImage.jpeg" alt="a laptop sitting on a desk with VS Code open">
+            </div>
+            <h4 class="blogPostTitle">From Software Sales to Software Development</h4>
+          </a>
+          <div class="blogPostContainer">
+            <h4 class="moreToCome">More Coming Soon...</h4>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+  <!-- end blog -->
+
+  <!-- contact -->
+  <section id="contact">
+    <div class="wrapper">
+      <div class="sectionWrapper">
+        <h2 class="sectionTitle">Contact</h2>
+        <div class="contactContainer">
+          <div class="contactDetailContainer">
+            <p class="contactDetail">evanyuekwan@gmail.com</p>
+          </div>
+          <div class="contactMethodContainer">
+            <p class="contactMethod">email</p>
+          </div>
+        </div>
+        <div class="contactContainer">
+          <div class="contactDetailContainer">
+            <p class="contactDetail">(905) 808-0802</p>
+          </div>
+          <div class="contactMethodContainer">
+            <p class="contactMethod">phone</p>
+          </div>
+        </div>
+        <form action="" id="contactForm" class="contactForm">
+          <label for="nameField" class="srOnly">Name</label>
+          <input type="text" name="name" id="nameField" class="nameField" placeholder="Name" required>
+
+          <label for="emailField" class="srOnly">Email</label>
+          <input type="email" name="email" id="emailField" class="emailField" placeholder="Email" required>
+
+          <label for="messageField" class="srOnly">Message</label>
+          <textarea name="messageField" id="messageField" class="messageField" placeholder="Enter a message" required></textarea>
+
+          <button type="submit" class="formSubmitButton">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- end contact -->
+
+  <!-- credits -->
+  <section id="credits">
+    <div class="wrapper">
+      <div class="sectionWrapper">
+        <h2 class="sectionTitle">Credits</h2>
+        <p class="credit"><a href="https://thenounproject.com/term/wok/1682066/" class="creditLink" target="_blank" rel="noopener norefferer">'Wok'</a> icon by Template from <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a></p>
+        <p class="credit"><a href="https://thenounproject.com/term/maple-leaf/1551209/" class="creditLink" target="_blank" rel="noopener norefferer">'Maple Leaf'</a> icon by mynamepong from <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a></p>
+        <p class="credit"><a href="https://thenounproject.com/term/tennis/3178238/" class="creditLink" target="_blank" rel="noopener norefferer">'Tennis'</a> icon by JunGSa from <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a></p>
+        <p class="credit"><a href="https://thenounproject.com/term/x-wing/1571953/" class="creditLink" target="_blank" rel="noopener norefferer">'X Wing'</a> icon by Ben Davis from <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a></p>
+      </div>
+    </div>
+  </section>
+  <!-- end credits -->
+
+  <!-- javascript -->
+  <script src="./scripts/script.js"></script>
 </body>
 </html>
