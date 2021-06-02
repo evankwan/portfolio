@@ -34,8 +34,19 @@
   </header>
   <!-- end header -->
 
+  <!-- hamburger toggler -->
+  <div class="hamburgerContainer">
+    <button id="hamburgerToggler" class="hamburgerToggler" aria-pressed="false" tabindex="0">Open Navigation Menu</button>
+    <div id="hamburger" class="hamburger">
+      <div class="middleLineContainer">
+        <div id="middleLine" class="middleLine"></div>
+      </div>
+    </div>
+  </div>
+  <!-- end of hamburger menu -->
+
   <!-- Fixed Nav Menu -->
-  <nav id="nav" class="fixedNavMenu">
+  <nav id="navMenu" class="fixedNavMenu">
     <div class="menuPageNumber">
       <span id="currentPageNumber" class="currentPageNumber">01</span>
       <span class="paginationSeparator">/</span> 
@@ -215,7 +226,7 @@
           <div class="cratedigger projectPreview" tabindex="0" role="button">
             <div class="projectDetails">
               <h3 class="projectTitle">Cratedigger</h3>
-              <p class="projectDescription">A Music Recommendation App that gives you recommendations based on your chosen genre or favourite artist</p>
+              <p class="projectDescription">A Music Recommendation App that gives recommendations based on your chosen genre or favourite artist</p>
               <p class="projectStack">Built using JavaScript, SCSS, the Last.fm API, and the Giphy API</p>
               <div class="projectLinksContainer">
                 <a href="https://evankwan.github.io/cratediggers.io/" target="_blank" rel="noopener noreferrer" class="projectLink">Live
@@ -430,6 +441,15 @@
             </div>
             <h4 class="blogPostTitle">From Software Sales to Software Development</h4>
           </a>
+          <a href="https://evanyuekwan.medium.com/from-software-sales-to-software-development-973fd2712212" class="blogPostContainer" target="_blank" rel="norefferer noopener">
+            <div class="blogImageContainer">
+              <img src="./assets/blogPostImage.jpeg" alt="a laptop sitting on a desk with VS Code open">
+            </div>
+            <h4 class="blogPostTitle">From Software Sales to Software Development</h4>
+          </a>
+          <div class="blogPostContainer">
+            <h4 class="moreToCome">More Coming Soon...</h4>
+          </div>
           <div class="blogPostContainer">
             <h4 class="moreToCome">More Coming Soon...</h4>
           </div>
@@ -489,11 +509,33 @@
   <section id="credits">
     <div class="wrapper">
       <div class="sectionWrapper">
-        <h2 class="sectionTitle">Credits</h2>
-        <p class="credit"><a href="https://thenounproject.com/term/wok/1682066/" class="creditLink" target="_blank" rel="noopener norefferer">'Wok'</a> icon by Template from <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a></p>
-        <p class="credit"><a href="https://thenounproject.com/term/maple-leaf/1551209/" class="creditLink" target="_blank" rel="noopener norefferer">'Maple Leaf'</a> icon by mynamepong from <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a></p>
-        <p class="credit"><a href="https://thenounproject.com/term/tennis/3178238/" class="creditLink" target="_blank" rel="noopener norefferer">'Tennis'</a> icon by JunGSa from <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a></p>
-        <p class="credit"><a href="https://thenounproject.com/term/x-wing/1571953/" class="creditLink" target="_blank" rel="noopener norefferer">'X Wing'</a> icon by Ben Davis from <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a></p>
+        <h2 class="sectionTitle creditsTitle">Credits</h2>
+        <ul>
+          <li class="credit">
+            <a href="https://thenounproject.com/term/wok/1682066/" class="creditLink" target="_blank" rel="noopener norefferer">'Wok'</a> 
+            icon by Template from 
+            <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a>
+          </li>
+
+          <li class="credit">
+            <a href="https://thenounproject.com/term/maple-leaf/1551209/" class="creditLink" target="_blank" rel="noopener norefferer">'Maple Leaf'</a> 
+            icon by mynamepong from 
+            <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a>
+          </li>
+
+          <li class="credit">
+            <a href="https://thenounproject.com/term/tennis/3178238/" class="creditLink" target="_blank" rel="noopener norefferer">'Tennis'</a> 
+            icon by JunGSa from 
+            <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a>
+          </li>
+
+          <li class="credit">
+            <a href="https://thenounproject.com/term/x-wing/1571953/" class="creditLink" target="_blank" rel="noopener norefferer">'X Wing'</a> 
+            icon by Ben Davis from 
+            <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a>
+          </li>
+        </ul>
+        
       </div>
     </div>
   </section>

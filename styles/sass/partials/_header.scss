@@ -28,8 +28,8 @@
   height: $headerImageSize;
   overflow: hidden;
   position: absolute;
-  right: 40px;
-  top: 12%;
+  right: 0;
+  top: 5%;
   transition: $standardTransition;
   width: $headerImageSize;
   z-index: 20;
@@ -59,10 +59,49 @@
   bottom: 100px;
   left: 8px;
   position: absolute;
+  transition: $standardTransition;
   z-index: 20;
 
   .scrollArrow {
     animation: slideDown 2s linear infinite;
     font-size: 5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pageTitle {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerImageContainer {
+    left: calc(50% - (#{$headerImageSize} / 2));
+    z-index: 40;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainHeaderContainer {
+    width: 100%;
+  }
+
+  .headerImageContainer {
+    top: 10%;
+  }
+
+  .pageTitle {
+    font-size: 6rem;
+    text-align: center;
+    width: 100%;
+  }
+  .scrollArrowContainer {
+    left: calc(50% - 25px);
   }
 }

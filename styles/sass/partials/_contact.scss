@@ -61,3 +61,21 @@
 .formSubmitButton:hover {
   border-color: $darkGrey;
 }
+
+@media (max-width: 500px) {
+  .contactContainer {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .contactDetailContainer {
+    flex-basis: auto;
+    font-size: 1.6rem;
+  }
+
+  .contactMethodContainer {
+    flex-basis: auto;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+}

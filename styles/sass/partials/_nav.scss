@@ -3,11 +3,13 @@
 
   background-color: $darkGrey;
   height: 100vh;
+  min-width: 250px;
   padding: 70px 50px;
   position: fixed;
   right: 0;
   top: 0;
-  width: 37.5%;
+  transition: $standardTransition;
+  width: $navMenuWidth;
 }
 
 .menuPageNumber,
@@ -130,5 +132,137 @@
     &:hover {
       color: $mainColor;
     }
+  }
+}
+
+.hamburgerContainer {
+  z-index: 60;
+}
+
+.hamburgerToggler {
+  display: none;
+  height: 75px;
+  opacity: 0;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  visibility: hidden;
+  width: 75px;
+}
+
+.hamburger {
+  display: none;
+  opacity: 0;
+  transition: $standardTransition;
+  visibility: hidden;
+}
+
+@media (max-width: 1200px) {
+  .fixedNavMenu {
+    padding: 50px 20px;
+    width: $navMenuWidth2;
+  }
+
+  .menuPageNumber,
+  .navMenu,
+  .navSocialList {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .fixedNavMenu {
+    border-left: 4px solid $white;
+    justify-content: flex-end;
+    padding: 50px 0;
+    right: -100%;
+    width: $navMenuWidth;
+    z-index: 50;
+  }
+
+  .showMenu {
+    right: 0;
+  }
+
+  .hamburgerToggler {
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0;
+    visibility: visible;
+    z-index: 80;
+  }
+
+  .hamburgerToggler:hover + .hamburger .middleLine {
+    width: 22.5px;
+  }
+
+  .hamburger {
+    @include setFlex(column, center, center);
+
+    background-color: $mainColor;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px $darkGrey;
+    display: default;
+    height: 75px;
+    opacity: 1;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    visibility: visible;
+    width: 75px;
+    z-index: 60;
+  }
+
+  .middleLineContainer {
+    @include setFlex(column, center, flex-start);
+
+    height: 100%;
+    width: 40px;
+  }
+
+  .middleLine {
+    background-color: $darkGrey;
+    height: 5px;
+    position: relative;
+    transition: $standardTransition;
+    width: 40px;
+
+    &::before,
+    &::after {
+      background-color: $darkGrey;
+      bottom: auto;
+      content: '';
+      height: 5px;
+      left: auto;
+      position: absolute;
+      right: auto;
+      top: auto;
+      transition: $standardTransition;
+      width: 40px;
+    }
+
+    &::before {
+      top: -15px;
+    }
+
+    &::after {
+      bottom: -15px;
+    }
+  }
+
+  .menuPageNumber {
+    flex-basis: 15%;
+  }
+
+  .navMenu {
+    flex-basis: 60%;
+  }
+
+  .navSocialList {
+    flex-basis: 15%;
+  }
+
+  .whiteHamburger {
+    background-color: $white;
   }
 }

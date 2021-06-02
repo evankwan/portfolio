@@ -23,7 +23,10 @@ $sassColor: #cc6699;
 // sizing
 $headerImageSize: 200px;
 $aboutIconSize: 100px;
-$projectsCellSize: 450px;
+// $projectsCellSize: 450px;
+$projectsCellSize: 27vw;
+$navMenuWidth: 37.5%;
+$navMenuWidth2: 25%;
 
 // transitions
 $standardTransition: .4s ease;
