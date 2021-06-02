@@ -174,7 +174,7 @@
   .fixedNavMenu {
     border-left: 4px solid $white;
     justify-content: flex-start;
-    padding: 50px 0;
+    padding: 40px 0;
     right: -100%;
     width: $navMenuWidth;
     z-index: 50;
@@ -250,16 +250,20 @@
     }
   }
 
+  .navList {
+    margin: 30px 0;
+  }
+
   .menuPageNumber {
-    flex-basis: 15%;
+    flex-basis: 10%;
   }
 
   .navMenu {
-    flex-basis: 60%;
+    flex-basis: 55%;
   }
 
   .navSocialList {
-    flex-basis: 15%;
+    flex-basis: 7.5%;
   }
 
   .whiteHamburger {
