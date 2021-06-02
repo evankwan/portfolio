@@ -85,15 +85,17 @@
   .pageTitle {
     font-size: 9rem;
   }
+
+  .headerImageContainer {
+    height: $headerImageSize2;
+    left: calc(50% - (#{$headerImageSize2} / 2));
+    width: $headerImageSize2;
+  }
 }
 
 @media (max-width: 500px) {
   .mainHeaderContainer {
     width: 100%;
-  }
-
-  .headerImageContainer {
-    top: 10%;
   }
 
   .pageTitle {
