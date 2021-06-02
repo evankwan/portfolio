@@ -15,7 +15,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="mainHeader">
+  <header id="home" class="mainHeader">
     <div class="wrapper">
       <div class="mainHeaderContainer">
         <h1 class="pageTitle">
@@ -35,7 +35,7 @@
   <!-- end header -->
 
   <!-- Fixed Nav Menu -->
-  <nav class="fixedNavMenu">
+  <nav id="nav" class="fixedNavMenu">
     <div class="menuPageNumber">
       <span id="currentPageNumber" class="currentPageNumber">01</span>
       <span class="paginationSeparator">/</span> 
@@ -106,7 +106,7 @@
         <div class="resumeBreak">
           <ul class="resumeBreakList">
             <li class="resumeBreakListItem">
-              <a href="#experience"  class="resumeBreakLink">Download Resume</a>
+              <a href="./assets/evan-kwan-resume.pdf"  class="resumeBreakLink" download>Download Resume</a>
             </li>
             <li class="resumeBreakListItem">
               <a href="#projects" class="resumeBreakLink">My Work</a>
@@ -172,53 +172,102 @@
   </section>
   <!-- end about -->
   
+  <div class="wrapper navLinkContainer">
+    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
+  </div>
+
   <!-- projects -->
   <section id="projects">
     <div class="wrapper">
       <div class="sectionWrapper">
         <h2 class="sectionTitle">Projects</h2>
         <div class="projectsContainer">
-          <div class="positiveVibesBoard projectPreview">
-            <div class="projectDetails">
+
+          <!-- positive vibes project -->
+          <div class="positiveVibesBoard projectPreview" tabindex="0" role="button">
+            <div class="projectDetails">  
               <h3 class="projectTitle">Positive Vibes Board</h3>
               <p class="projectDescription">A positivity and motivational message board</p>
               <p class="projectStack">Built using React and Firebase</p>
+              <div class="projectLinksContainer">
+                <a href="https://positive-vibes-only.netlify.app/" target="_blank" rel="noopener noreferrer" class="projectLink">Live Site</a>
+                <a href="https://github.com/evankwan/evan-kwan-project-three" target="_blank" rel="noopener noreferrer" class="projectLink">Repo</a>
+              </div>
             </div>
           </div>
-          <div class="pokemonBlackjack projectPreview">
+          <!-- end of positive vibes project -->
+
+          <!-- pokemon blackjack project -->
+          <div class="pokemonBlackjack projectPreview" tabindex="0" role="button">
             <div class="projectDetails">
               <h3 class="projectTitle">Pokémon Blackjack</h3>
               <p class="projectDescription">A Pokémon-themed blackjack game</p>
               <p class="projectStack">Built using React, the PokéAPI, and the Deck of Cards API</p>
+              <div class="projectLinksContainer">
+                <a href="https://ek-pokemon-blackjack.netlify.app/" target="_blank" rel="noopener noreferrer" class="projectLink">Live Site</a>
+                <a href="https://github.com/evankwan/pokemon-blackjack" target="_blank" rel="noopener noreferrer" class="projectLink">Repo</a>
+              </div>
             </div>
           </div>
-          <div class="cratedigger projectPreview">
+          <!-- end of pokemon blackjack -->
+
+          <!-- cratedigger project -->
+          <div class="cratedigger projectPreview" tabindex="0" role="button">
             <div class="projectDetails">
               <h3 class="projectTitle">Cratedigger</h3>
               <p class="projectDescription">A Music Recommendation App that gives you recommendations based on your chosen genre or favourite artist</p>
               <p class="projectStack">Built using JavaScript, SCSS, the Last.fm API, and the Giphy API</p>
+              <div class="projectLinksContainer">
+                <a href="https://evankwan.github.io/cratediggers.io/" target="_blank" rel="noopener noreferrer" class="projectLink">Live
+                  Site</a>
+                <a href="https://github.com/evankwan/cratediggers.io" target="_blank" rel="noopener noreferrer"
+                  class="projectLink">Repo</a>
+              </div>
             </div>
           </div>
-          <div class="captured projectPreview">
+          <!-- end of cratedigger -->
+
+          <!-- captured project -->
+          <div class="captured projectPreview" tabindex="0" role="button">
             <div class="projectDetails">
               <h3 class="projectTitle">Captured</h3>
               <p class="projectDescription">A PSD-conversion for Juno College's Web Development Bootcamp.</p>
               <p class="projectStack">Built using HTML, SCSS, and JavaScript</p>
+              <div class="projectLinksContainer">
+                <a href="https://evankwan.github.io/evan-kwan-project-one/" target="_blank" rel="noopener noreferrer" class="projectLink">Live
+                  Site</a>
+                <a href="https://github.com/evankwan/evan-kwan-project-one" target="_blank" rel="noopener noreferrer"
+                  class="projectLink">Repo</a>
+              </div>
             </div>
           </div>
-          <div class="scattergories projectPreview">
+          <!-- end of captured project -->
+
+          <!-- scattergories project -->
+          <div class="scattergories projectPreview" tabindex="0" role="button">
             <div class="projectDetails">
               <h3 class="projectTitle">Scattergories</h3>
               <p class="projectDescription">A static Scattergories game board to play with friends, family, or colleagues over Zoom.</p>
               <p class="projectStack">Built using HTML, CSS, and JavaScript</p>
+              <div class="projectLinksContainer">
+                <a href="https://evankwan.github.io/scattergories/" target="_blank" rel="noopener noreferrer" class="projectLink">Live
+                  Site</a>
+                <a href="https://github.com/evankwan/scattergories" target="_blank" rel="noopener noreferrer"
+                  class="projectLink">Repo</a>
+              </div>
             </div>
           </div>
+          <!-- end of scattergories project -->
         </div>
       </div>
       
     </div>
   </section>
   <!-- end projects -->
+
+  <div class="wrapper navLinkContainer">
+    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
+  </div>
 
   <!-- skills -->
   <section id="skills">
@@ -304,6 +353,10 @@
   </section>
   <!-- end skills -->
 
+  <div class="wrapper navLinkContainer">
+    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
+  </div>
+
   <!-- experience -->
   <section id="experience" class="alternateBackground">
     <div class="wrapper">
@@ -360,6 +413,10 @@
   </section>
   <!-- end experience -->
 
+  <div class="wrapper navLinkContainer">
+    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
+  </div>
+
   <!-- blog -->
   <section id="blog">
     <div class="wrapper">
@@ -382,6 +439,10 @@
   </section>
   <!-- end blog -->
 
+  <div class="wrapper navLinkContainer">
+    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
+  </div>
+
   <!-- contact -->
   <section id="contact">
     <div class="wrapper">
@@ -403,7 +464,7 @@
             <p class="contactMethod">phone</p>
           </div>
         </div>
-        <form action="" id="contactForm" class="contactForm">
+        <form method="POST" id="contactForm" class="contactForm" data-netlify="true" name="contactForm">
           <label for="nameField" class="srOnly">Name</label>
           <input type="text" name="name" id="nameField" class="nameField" placeholder="Name" required>
 
@@ -420,6 +481,10 @@
   </section>
   <!-- end contact -->
 
+  <div class="wrapper navLinkContainer">
+    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
+  </div>
+
   <!-- credits -->
   <section id="credits">
     <div class="wrapper">
@@ -433,6 +498,10 @@
     </div>
   </section>
   <!-- end credits -->
+
+  <div class="wrapper navLinkContainer">
+    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
+  </div>
 
   <!-- javascript -->
   <script src="./scripts/script.js"></script>

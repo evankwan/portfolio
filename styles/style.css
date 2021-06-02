@@ -277,9 +277,32 @@ section {
 
 .alternateBackground {
   background-color: #262626;
+  border-right: 2px solid #F9F9F9;
   content: '';
   height: 100%;
   width: 100%;
+}
+
+.navLink {
+  color: #262626;
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  left: -100%;
+  opacity: 0;
+  position: absolute;
+  text-decoration: underline;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.navLink:focus {
+  background-color: #61D58E;
+  border: 2px solid #262626;
+  left: 0;
+  opacity: 1;
+  outline: none;
+  padding: 5px 20px;
 }
 
 .sectionStatement {
@@ -383,7 +406,7 @@ section {
   height: 200px;
   overflow: hidden;
   position: absolute;
-  right: 50px;
+  right: 40px;
   top: 12%;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -804,10 +827,19 @@ section {
   z-index: 10;
 }
 
+.projectPreview {
+  border: 2px solid #F9F9F9;
+  overflow: hidden;
+  position: relative;
+}
+
 .positiveVibesBoard {
   background-image: url(../assets/positive-vibes-only.png);
   background-position: top center;
   background-size: cover;
+  border-right: 4px solid #F9F9F9;
+  border-top: 4px solid #F9F9F9;
+  border-radius: 20px 20px 0 0;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -830,6 +862,7 @@ section {
   background-image: url(../assets/cratedigger.png);
   background-position: center center;
   background-size: cover;
+  border-right: 4px solid #F9F9F9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
@@ -838,7 +871,10 @@ section {
 }
 
 .captured {
-  background-color: #E0F5E8;
+  background-image: url(../assets/captured.png);
+  background-position: center center;
+  background-size: cover;
+  border-right: 4px solid #F9F9F9;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
@@ -847,7 +883,12 @@ section {
 }
 
 .scattergories {
-  background-color: #61D58E;
+  background-image: url(../assets/scattergories.png);
+  background-position: top center;
+  background-size: cover;
+  border-bottom: 4px solid #F9F9F9;
+  border-right: 4px solid #F9F9F9;
+  border-radius: 0 0 20px 20px;
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -855,12 +896,9 @@ section {
   grid-area: 4 / 1 / span 1 / span 2;
 }
 
-.projectPreview {
-  overflow: hidden;
-  position: relative;
-}
-
-.projectPreview:hover > .projectDetails {
+.projectPreview:hover > .projectDetails,
+.projectPreview:focus > .projectDetails,
+.projectFocused > .projectDetails {
   opacity: .9;
   left: 0;
 }
@@ -911,12 +949,37 @@ section {
 }
 
 .projectDetails .projectStack {
-  color: #61D58E;
+  color: #F9F9F9;
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1.5px;
   line-height: 1.6;
   margin-top: 20px;
+}
+
+.projectDetails .projectLinksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projectDetails .projectLinksContainer .projectLink {
+  color: #61D58E;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 20px;
+  text-decoration: underline;
 }
 
 .skillsContainer {
