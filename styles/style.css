@@ -753,6 +753,7 @@ section {
 
 @media (max-width: 900px) {
   .fixedNavMenu {
+    border-left: 4px solid #F9F9F9;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -1117,10 +1118,10 @@ section {
 .projectsContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (450px)[2];
-      grid-template-columns: repeat(2, 450px);
-  -ms-grid-rows: (450px)[4];
-      grid-template-rows: repeat(4, 450px);
+  -ms-grid-columns: (27vw)[2];
+      grid-template-columns: repeat(2, 27vw);
+  -ms-grid-rows: (27vw)[4];
+      grid-template-rows: repeat(4, 27vw);
   position: relative;
   width: calc(2 * $projectsCellSize);
   z-index: 10;
@@ -1221,7 +1222,7 @@ section {
   height: 100%;
   left: -100%;
   opacity: 0;
-  padding: 20px 50px;
+  padding: 20px 30px;
   position: absolute;
   text-align: center;
   top: 0;
@@ -1243,7 +1244,7 @@ section {
   font-size: 1.6rem;
   font-weight: normal;
   letter-spacing: 1.2px;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-top: 20px;
 }
 
@@ -1252,7 +1253,7 @@ section {
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1.5px;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-top: 20px;
 }
 
@@ -1279,6 +1280,69 @@ section {
   letter-spacing: 1.5px;
   margin: 20px;
   text-decoration: underline;
+}
+
+@media (max-width: 1250px) {
+  .projectDetails {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .projectsContainer {
+    grid-auto-rows: 300px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 300px;
+        grid-template-rows: 300px;
+    width: 120%;
+    z-index: 10;
+  }
+  .projectsContainer * {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / span 1;
+  }
+  .projectPreview {
+    border: 2px solid #F9F9F9;
+    width: 100%;
+  }
+  .positiveVibesBoard {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / span 1;
+  }
+  .pokemonBlackjack {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / span 1;
+    background-position: bottom -230px center;
+  }
+  .cratedigger {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / span 1;
+  }
+  .captured {
+    background-position: center left;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / span 1;
+  }
+  .scattergories {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / span 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .projectsContainer {
+    width: 100%;
+  }
+  .pokemonBlackjack {
+    background-position: bottom -300px center;
+  }
 }
 
 .skillsContainer {
@@ -1459,8 +1523,9 @@ section {
 .blogPostsContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  -ms-grid-columns: (minmax(200px, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
 }
 
 .blogIntroText {
@@ -1489,12 +1554,10 @@ section {
   border-radius: 10px;
   -webkit-box-shadow: 1px 1px 2px #262626;
           box-shadow: 1px 1px 2px #262626;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
   height: 250px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
-  width: 220px;
+  width: 100%;
 }
 
 .blogPostContainer:hover {
@@ -1504,6 +1567,8 @@ section {
 
 .blogImageContainer {
   border-radius: 10px 10px 0 0;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   overflow: hidden;
   width: 100%;
 }
@@ -1563,6 +1628,36 @@ section {
       flex-basis: 100%;
   padding: 0 20px;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .blogPostsContainer {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    -ms-grid-columns: (minmax(180px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+  .blogPostContainer {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 420px) {
+  .blogPostsContainer {
+    -ms-grid-columns: 250px;
+        grid-template-columns: 250px;
+    margin: 0 auto;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+  .blogPostContainer {
+    margin: 0 auto;
+  }
 }
 
 .contactContainer {

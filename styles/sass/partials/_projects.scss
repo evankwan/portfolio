@@ -71,7 +71,7 @@
   height: 100%;
   left: -100%;
   opacity: 0;
-  padding: 20px 50px;
+  padding: 20px 30px;
   position: absolute;
   text-align: center;
   top: 0;
@@ -86,14 +86,14 @@
   .projectDescription {
     @include setFont(1.6rem, normal, $white, 1.2px);
 
-    line-height: 1.6;
+    line-height: 1.4;
     margin-top: 20px;
   }
 
   .projectStack {
     @include setFont(1.6rem, bold, $white, 1.5px);
 
-    line-height: 1.6;
+    line-height: 1.4;
     margin-top: 20px;
   }
 
@@ -109,6 +109,59 @@
   }
 }
 
+@media (max-width: 1250px) {
+  .projectDetails {
+    padding: 20px;
+  }
+}
 
+@media (max-width: 1200px) {
+  .projectsContainer {
+    grid-auto-rows: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px;
+    width: 120%;
+    z-index: 10;
+  }
 
+  .projectsContainer * {
+    grid-column: 1 / span 1;
+  }
 
+  .projectPreview {
+    border: 2px solid $white;
+    width: 100%;
+  }
+
+  .positiveVibesBoard {
+    grid-row: 1 / span 1;
+  }
+
+  .pokemonBlackjack {
+    grid-row: 2 / span 1;
+    background-position: bottom -230px center;
+  }
+
+  .cratedigger {
+    grid-row: 3 / span 1;
+  }
+
+  .captured {
+    background-position: center left;
+    grid-row: 4 / span 1;
+  }
+
+  .scattergories {
+    grid-row: 5 / span 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .projectsContainer {
+    width: 100%;
+  }
+
+  .pokemonBlackjack {
+    background-position: bottom -300px center;
+  }
+}

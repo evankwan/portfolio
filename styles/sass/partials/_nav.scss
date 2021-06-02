@@ -172,6 +172,7 @@
 
 @media (max-width: 900px) {
   .fixedNavMenu {
+    border-left: 4px solid $white;
     justify-content: flex-end;
     padding: 50px 0;
     right: -100%;
