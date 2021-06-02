@@ -1783,6 +1783,10 @@ section {
   }
 }
 
+.credits {
+  margin-bottom: 20px;
+}
+
 .creditsTitle {
   color: #262626;
   font-size: 3rem;
