@@ -1752,11 +1752,43 @@ section {
   border-color: #262626;
 }
 
+@media (max-width: 500px) {
+  .contactContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactDetailContainer {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    font-size: 1.6rem;
+  }
+  .contactMethodContainer {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+}
+
+.creditsTitle {
+  color: #262626;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 40px;
+}
+
 .credit {
   color: #262626;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: normal;
   letter-spacing: 1.5px;
+  margin-bottom: 20px;
 }
 
 .creditLink {

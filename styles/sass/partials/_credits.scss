@@ -1,5 +1,12 @@
+.creditsTitle {
+  @include setFont(3rem, bold, $darkGrey, 1.5px);
+  margin-bottom: 40px;
+}
+
 .credit {
-  @include setFont(2rem, normal, $darkGrey, 1.5px);
+  @include setFont(1.6rem, normal, $darkGrey, 1.5px);
+
+  margin-bottom: 20px;
 }
 
 .creditLink {
