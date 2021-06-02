@@ -7,10 +7,19 @@
   z-index: 10;
 }
 
+.projectPreview {
+  border: 2px solid $white;
+  overflow: hidden;
+  position: relative;
+}
+
 .positiveVibesBoard {
   background-image: url(../assets/positive-vibes-only.png);
   background-position: top center;
   background-size: cover;
+  border-right: 4px solid $white;
+  border-top: 4px solid $white;
+  border-radius: 20px 20px 0 0;
   grid-area: 1 / 1 / span 1 / span 2;
 }
 
@@ -25,27 +34,31 @@
   background-image: url(../assets/cratedigger.png);
   background-position: center center;
   background-size: cover;
+  border-right: 4px solid $white;
   grid-area: 2 / 2 / span 1 / span 1;
 }
 
 .captured {
-  background-color: $mainColorLight;
+  background-image: url(../assets/captured.png);
+  background-position: center center;
+  background-size: cover;
+  border-right: 4px solid $white;
   grid-area: 3 / 2 / span 1 / span 1;
 }
 
 .scattergories {
-  background-color: $mainColor;
+  background-image: url(../assets/scattergories.png);
+  background-position: top center;
+  background-size: cover;
+  border-bottom: 4px solid $white;
+  border-right: 4px solid $white;
+  border-radius: 0 0 20px 20px;
   grid-area: 4 / 1 / span 1 / span 2;
 }
 
-
-
-.projectPreview {
-  overflow: hidden;
-  position: relative;
-}
-
-.projectPreview:hover > .projectDetails {
+.projectPreview:hover > .projectDetails,
+.projectPreview:focus > .projectDetails,
+.projectFocused > .projectDetails {
   opacity: .9;
   left: 0;
 }
@@ -78,10 +91,21 @@
   }
 
   .projectStack {
-    @include setFont(1.6rem, bold, $mainColor, 1.5px);
+    @include setFont(1.6rem, bold, $white, 1.5px);
 
     line-height: 1.6;
     margin-top: 20px;
+  }
+
+  .projectLinksContainer {
+    @include setFlex(row, center, center);
+
+    .projectLink {
+      @include setFont(1.6rem, bold, $mainColor, 1.5px);
+
+      margin: 20px;
+      text-decoration: underline;
+    }
   }
 }
 
