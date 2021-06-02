@@ -3,6 +3,7 @@
 
   background-color: $darkGrey;
   height: 100vh;
+  min-width: 250px;
   padding: 70px 50px;
   position: fixed;
   right: 0;
@@ -134,11 +135,15 @@
   }
 }
 
+.hamburgerContainer {
+  z-index: 60;
+}
+
 .hamburgerToggler {
   display: none;
   height: 75px;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 20px;
   visibility: hidden;
@@ -167,7 +172,15 @@
 
 @media (max-width: 900px) {
   .fixedNavMenu {
+    justify-content: flex-end;
+    padding: 50px 0;
     right: -100%;
+    width: $navMenuWidth;
+    z-index: 50;
+  }
+
+  .showMenu {
+    right: 0;
   }
 
   .hamburgerToggler {
@@ -175,33 +188,43 @@
     display: inline-block;
     opacity: 0;
     visibility: visible;
-    z-index: 50;
+    z-index: 80;
+  }
+
+  .hamburgerToggler:hover + .hamburger .middleLine {
+    width: 22.5px;
   }
 
   .hamburger {
     @include setFlex(column, center, center);
 
+    background-color: $mainColor;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px $darkGrey;
     display: default;
     height: 75px;
     opacity: 1;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 20px;
     visibility: visible;
     width: 75px;
-    z-index: 30;
+    z-index: 60;
+  }
+
+  .middleLineContainer {
+    @include setFlex(column, center, flex-start);
+
+    height: 100%;
+    width: 40px;
   }
 
   .middleLine {
     background-color: $darkGrey;
-    bottom: auto;
     height: 5px;
-    left: auto;
     position: relative;
-    right: auto;
-    top: auto;
     transition: $standardTransition;
-    width: 50px;
+    width: 40px;
 
     &::before,
     &::after {
@@ -214,15 +237,31 @@
       right: auto;
       top: auto;
       transition: $standardTransition;
-      width: 50px;
+      width: 40px;
     }
 
     &::before {
-      top: -20px;
+      top: -15px;
     }
 
     &::after {
-      bottom: -20px;
+      bottom: -15px;
     }
+  }
+
+  .menuPageNumber {
+    flex-basis: 15%;
+  }
+
+  .navMenu {
+    flex-basis: 60%;
+  }
+
+  .navSocialList {
+    flex-basis: 15%;
+  }
+
+  .whiteHamburger {
+    background-color: $white;
   }
 }

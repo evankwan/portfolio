@@ -237,6 +237,7 @@ html {
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -359,18 +360,6 @@ section {
   position: relative;
 }
 
-.subSectionHeading::after {
-  background-color: #61D58E;
-  border-radius: 100px;
-  content: '';
-  height: calc(100% + 20px);
-  left: -80px;
-  position: absolute;
-  top: -10px;
-  width: 80%;
-  z-index: -10;
-}
-
 .wrapper {
   margin: 0 0 0 auto;
   max-width: 900px;
@@ -380,6 +369,15 @@ section {
 @media (max-width: 1200px) {
   .wrapper {
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    width: 95%;
+  }
+  .sectionWrapper {
+    width: 100%;
   }
 }
 
@@ -495,6 +493,7 @@ section {
 @media (max-width: 900px) {
   .headerImageContainer {
     left: calc(50% - (200px / 2));
+    z-index: 40;
   }
 }
 
@@ -537,6 +536,7 @@ section {
           align-items: center;
   background-color: #262626;
   height: 100vh;
+  min-width: 250px;
   padding: 70px 50px;
   position: fixed;
   right: 0;
@@ -716,11 +716,15 @@ section {
   color: #61D58E;
 }
 
+.hamburgerContainer {
+  z-index: 60;
+}
+
 .hamburgerToggler {
   display: none;
   height: 75px;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 20px;
   visibility: hidden;
@@ -749,14 +753,26 @@ section {
 
 @media (max-width: 900px) {
   .fixedNavMenu {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 50px 0;
     right: -100%;
+    width: 37.5%;
+    z-index: 50;
+  }
+  .showMenu {
+    right: 0;
   }
   .hamburgerToggler {
     cursor: pointer;
     display: inline-block;
     opacity: 0;
     visibility: visible;
-    z-index: 50;
+    z-index: 80;
+  }
+  .hamburgerToggler:hover + .hamburger .middleLine {
+    width: 22.5px;
   }
   .hamburger {
     display: -webkit-box;
@@ -772,27 +788,44 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-color: #61D58E;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 1px 3px #262626;
+            box-shadow: 0px 1px 3px #262626;
     display: default;
     height: 75px;
     opacity: 1;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 20px;
     visibility: visible;
     width: 75px;
-    z-index: 30;
+    z-index: 60;
+  }
+  .middleLineContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 100%;
+    width: 40px;
   }
   .middleLine {
     background-color: #262626;
-    bottom: auto;
     height: 5px;
-    left: auto;
     position: relative;
-    right: auto;
-    top: auto;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
-    width: 50px;
+    width: 40px;
   }
   .middleLine::before, .middleLine::after {
     background-color: #262626;
@@ -805,13 +838,28 @@ section {
     top: auto;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
-    width: 50px;
+    width: 40px;
   }
   .middleLine::before {
-    top: -20px;
+    top: -15px;
   }
   .middleLine::after {
-    bottom: -20px;
+    bottom: -15px;
+  }
+  .menuPageNumber {
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+  }
+  .navMenu {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+  .navSocialList {
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+  }
+  .whiteHamburger {
+    background-color: #F9F9F9;
   }
 }
 
@@ -821,6 +869,8 @@ section {
   height: 100px;
   margin: 40px 0;
   position: relative;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   width: 125%;
   z-index: 20;
 }
@@ -839,6 +889,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 100%;
   margin: 0 auto;
   padding-left: 20px;
@@ -891,7 +943,6 @@ section {
 }
 
 .symbolContainer:hover > .iconHeading {
-  letter-spacing: 5px;
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
 }
@@ -971,6 +1022,96 @@ section {
   font-size: 1.6rem;
   font-weight: normal;
   letter-spacing: 1px;
+}
+
+.aboutSection .subSectionHeading::after {
+  background-color: #61D58E;
+  border-radius: 100px;
+  content: '';
+  height: calc(100% + 20px);
+  left: -80px;
+  position: absolute;
+  top: -10px;
+  width: 80%;
+  z-index: -10;
+}
+
+@media (max-width: 1400px) {
+  .symbolsContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .resumeBreak {
+    left: -70px;
+  }
+}
+
+@media (max-width: 650px) {
+  .resumeBreak {
+    height: auto;
+    left: 0;
+    width: 100%;
+  }
+  .resumeBreakList {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    row-gap: 10px;
+    text-align: left;
+  }
+  .resumeBreakListItem {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 10px 20px;
+  }
+  .symbolContainer:hover > .iconHeading {
+    letter-spacing: 5px;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  .aboutSection .subSectionHeading::after {
+    min-width: 325px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+  .aboutFloatingBox {
+    float: none;
+    margin: 0 auto 40px;
+    padding: 20px 0;
+    position: static;
+    width: 80%;
+  }
+  .floatingBoxList {
+    margin: 0 auto;
+    padding: 0 30px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+}
+
+@media (max-width: 400px) {
+  .symbolsContainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .aboutFloatingBox {
+    width: 90%;
+  }
+  .floatingBoxList {
+    padding: 0 10px;
+  }
 }
 
 .projectsContainer {
