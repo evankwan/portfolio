@@ -1,3 +1,7 @@
+.credits {
+  margin-bottom: 20px;
+}
+
 .creditsTitle {
   @include setFont(3rem, bold, $darkGrey, 1.5px);
   margin-bottom: 40px;
