@@ -38,15 +38,16 @@
   background-color: $white;
   border: none;
   border-bottom: 1px solid $darkGrey;
+  border-radius: 0;
   line-height: 1.6;
+  margin-bottom: 10px;
   outline: none;
   padding: 10px;
   width: 100%;
 }
 
 .messageField {
-  // border: 1px solid $darkGrey;
-  // border-radius: 10px;
+  border-radius: 0;
   resize: none;
 }
 

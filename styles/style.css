@@ -1735,13 +1735,16 @@ section {
   background-color: #F9F9F9;
   border: none;
   border-bottom: 1px solid #262626;
+  border-radius: 0;
   line-height: 1.6;
+  margin-bottom: 10px;
   outline: none;
   padding: 10px;
   width: 100%;
 }
 
 .messageField {
+  border-radius: 0;
   resize: none;
 }
 
