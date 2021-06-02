@@ -292,7 +292,6 @@ section {
 
 .alternateBackground {
   background-color: #262626;
-  border-right: 2px solid #F9F9F9;
   content: '';
   height: 100%;
   width: 100%;
@@ -537,6 +536,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   background-color: #262626;
+  border-left: 2px solid #F9F9F9;
   height: 100vh;
   min-width: 250px;
   padding: 70px 50px;
@@ -759,7 +759,7 @@ section {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 50px 0;
+    padding: 40px 0;
     right: -100%;
     width: 37.5%;
     z-index: 50;
@@ -849,17 +849,20 @@ section {
   .middleLine::after {
     bottom: -15px;
   }
+  .navList {
+    margin: 30px 0;
+  }
   .menuPageNumber {
-    -ms-flex-preferred-size: 15%;
-        flex-basis: 15%;
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
   }
   .navMenu {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
   }
   .navSocialList {
-    -ms-flex-preferred-size: 15%;
-        flex-basis: 15%;
+    -ms-flex-preferred-size: 7.5%;
+        flex-basis: 7.5%;
   }
   .whiteHamburger {
     background-color: #F9F9F9;
