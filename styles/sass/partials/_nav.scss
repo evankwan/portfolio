@@ -2,6 +2,7 @@
   @include setFlex(column, space-between, center);
 
   background-color: $darkGrey;
+  border-left: 2px solid $white;
   height: 100vh;
   min-width: 250px;
   padding: 70px 50px;

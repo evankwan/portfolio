@@ -292,7 +292,6 @@ section {
 
 .alternateBackground {
   background-color: #262626;
-  border-right: 2px solid #F9F9F9;
   content: '';
   height: 100%;
   width: 100%;
@@ -537,6 +536,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   background-color: #262626;
+  border-left: 2px solid #F9F9F9;
   height: 100vh;
   min-width: 250px;
   padding: 70px 50px;
