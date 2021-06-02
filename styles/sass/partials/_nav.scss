@@ -7,7 +7,8 @@
   position: fixed;
   right: 0;
   top: 0;
-  width: 37.5%;
+  transition: $standardTransition;
+  width: $navMenuWidth;
 }
 
 .menuPageNumber,
@@ -129,6 +130,99 @@
 
     &:hover {
       color: $mainColor;
+    }
+  }
+}
+
+.hamburgerToggler {
+  display: none;
+  height: 75px;
+  opacity: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  visibility: hidden;
+  width: 75px;
+}
+
+.hamburger {
+  display: none;
+  opacity: 0;
+  transition: $standardTransition;
+  visibility: hidden;
+}
+
+@media (max-width: 1200px) {
+  .fixedNavMenu {
+    padding: 50px 20px;
+    width: $navMenuWidth2;
+  }
+
+  .menuPageNumber,
+  .navMenu,
+  .navSocialList {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .fixedNavMenu {
+    right: -100%;
+  }
+
+  .hamburgerToggler {
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0;
+    visibility: visible;
+    z-index: 50;
+  }
+
+  .hamburger {
+    @include setFlex(column, center, center);
+
+    display: default;
+    height: 75px;
+    opacity: 1;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    visibility: visible;
+    width: 75px;
+    z-index: 30;
+  }
+
+  .middleLine {
+    background-color: $darkGrey;
+    bottom: auto;
+    height: 5px;
+    left: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    transition: $standardTransition;
+    width: 50px;
+
+    &::before,
+    &::after {
+      background-color: $darkGrey;
+      bottom: auto;
+      content: '';
+      height: 5px;
+      left: auto;
+      position: absolute;
+      right: auto;
+      top: auto;
+      transition: $standardTransition;
+      width: 50px;
+    }
+
+    &::before {
+      top: -20px;
+    }
+
+    &::after {
+      bottom: -20px;
     }
   }
 }

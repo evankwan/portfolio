@@ -242,7 +242,9 @@ html {
 body {
   background-color: #F9F9F9;
   font-family: 'Merriweather Sans', sans-serif;
-  width: 62.5%;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  width: calc(100% - 37.5%);
 }
 
 h1,
@@ -273,6 +275,18 @@ img {
 
 section {
   padding: 50px 0;
+}
+
+@media (max-width: 1200px) {
+  body {
+    width: calc(100% - 25%);
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    width: 100%;
+  }
 }
 
 .alternateBackground {
@@ -363,6 +377,12 @@ section {
   width: 85%;
 }
 
+@media (max-width: 1200px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+
 .mainHeader {
   background-color: #61D58E;
   width: 100%;
@@ -406,8 +426,8 @@ section {
   height: 200px;
   overflow: hidden;
   position: absolute;
-  right: 40px;
-  top: 12%;
+  right: 0;
+  top: 5%;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   width: 200px;
@@ -455,6 +475,8 @@ section {
   bottom: 100px;
   left: 8px;
   position: absolute;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   z-index: 20;
 }
 
@@ -462,6 +484,41 @@ section {
   -webkit-animation: slideDown 2s linear infinite;
           animation: slideDown 2s linear infinite;
   font-size: 5rem;
+}
+
+@media (max-width: 1200px) {
+  .pageTitle {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerImageContainer {
+    left: calc(50% - (200px / 2));
+  }
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainHeaderContainer {
+    width: 100%;
+  }
+  .headerImageContainer {
+    top: 10%;
+  }
+  .pageTitle {
+    font-size: 6rem;
+    text-align: center;
+    width: 100%;
+  }
+  .scrollArrowContainer {
+    left: calc(50% - 25px);
+  }
 }
 
 .fixedNavMenu {
@@ -484,6 +541,8 @@ section {
   position: fixed;
   right: 0;
   top: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   width: 37.5%;
 }
 
@@ -655,6 +714,105 @@ section {
 
 .navSocialList .navSocialLink:hover {
   color: #61D58E;
+}
+
+.hamburgerToggler {
+  display: none;
+  height: 75px;
+  opacity: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  visibility: hidden;
+  width: 75px;
+}
+
+.hamburger {
+  display: none;
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  visibility: hidden;
+}
+
+@media (max-width: 1200px) {
+  .fixedNavMenu {
+    padding: 50px 20px;
+    width: 25%;
+  }
+  .menuPageNumber,
+  .navMenu,
+  .navSocialList {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .fixedNavMenu {
+    right: -100%;
+  }
+  .hamburgerToggler {
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0;
+    visibility: visible;
+    z-index: 50;
+  }
+  .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: default;
+    height: 75px;
+    opacity: 1;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    visibility: visible;
+    width: 75px;
+    z-index: 30;
+  }
+  .middleLine {
+    background-color: #262626;
+    bottom: auto;
+    height: 5px;
+    left: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    width: 50px;
+  }
+  .middleLine::before, .middleLine::after {
+    background-color: #262626;
+    bottom: auto;
+    content: '';
+    height: 5px;
+    left: auto;
+    position: absolute;
+    right: auto;
+    top: auto;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    width: 50px;
+  }
+  .middleLine::before {
+    top: -20px;
+  }
+  .middleLine::after {
+    bottom: -20px;
+  }
 }
 
 .resumeBreak {
