@@ -959,7 +959,7 @@ section {
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   grid-gap: 50px;
-  margin: 40px 0;
+  margin: 40px 0 0;
 }
 
 .symbolContainer:hover > .iconHeading {
