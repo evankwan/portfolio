@@ -130,6 +130,8 @@
 
     transition: .3s ease;
 
+    &:active,
+    &:focus,
     &:hover {
       color: $mainColor;
     }
