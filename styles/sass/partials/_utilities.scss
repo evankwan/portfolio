@@ -6,16 +6,21 @@
 }
 
 .backToTopContainer {
-  @include setFlex(row, flex-start, center);
-
   padding-bottom: 80px;
 
   .backToTop {
+    @include setFlex(row, space-between, center);
+    @include setFont(2rem, normal, $darkGrey, 1.5px);
+    width: 230px; 
+  }
+
+  .backToTopIcon {
     @include setFlex(column, center, center);
 
     color: $darkGrey;
     display: block;
     height: 80px;
+    margin-right: 20px;
     text-align: center;
     text-shadow: 0 24px 0 $mainColor;
     width: 80px;

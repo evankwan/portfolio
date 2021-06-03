@@ -25,6 +25,7 @@
 
 .headerImageContainer {
   border-radius: 50%;
+  // box-shadow: 0px 5px 5px $darkGrey;
   height: $headerImageSize;
   overflow: hidden;
   position: absolute;
@@ -35,7 +36,7 @@
   z-index: 20;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(10deg);
   }
 }
 
