@@ -193,8 +193,8 @@
     z-index: 80;
   }
 
-  .hamburgerToggler:hover + .hamburger .middleLine {
-    width: 27.5px;
+  .hamburgerToggler:hover + .hamburger {
+    background-color: $mainColorLight;
   }
 
   .hamburger {
@@ -226,7 +226,7 @@
     height: 5px;
     position: relative;
     transition: $standardTransition;
-    width: 40px;
+    width: 27.5px;
 
     &::before,
     &::after {
@@ -269,5 +269,19 @@
 
   .whiteHamburger {
     background-color: $white;
+  }
+
+  .whiteHamburger .middleLine {
+    width: 0;
+  }
+
+  .whiteHamburger .middleLine::before {
+    transform: translate(-5px, 15px) rotate(45deg);
+    width: 50px;
+  }
+
+  .whiteHamburger .middleLine::after {
+    transform: translate(-5px, -15px) rotate(-45deg);
+    width: 50px;
   }
 }

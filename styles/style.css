@@ -238,6 +238,7 @@ html {
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -774,8 +775,8 @@ section {
     visibility: visible;
     z-index: 80;
   }
-  .hamburgerToggler:hover + .hamburger .middleLine {
-    width: 27.5px;
+  .hamburgerToggler:hover + .hamburger {
+    background-color: #E0F5E8;
   }
   .hamburger {
     display: -webkit-box;
@@ -828,7 +829,7 @@ section {
     position: relative;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
-    width: 40px;
+    width: 27.5px;
   }
   .middleLine::before, .middleLine::after {
     background-color: #262626;
@@ -866,6 +867,19 @@ section {
   }
   .whiteHamburger {
     background-color: #F9F9F9;
+  }
+  .whiteHamburger .middleLine {
+    width: 0;
+  }
+  .whiteHamburger .middleLine::before {
+    -webkit-transform: translate(-5px, 15px) rotate(45deg);
+            transform: translate(-5px, 15px) rotate(45deg);
+    width: 50px;
+  }
+  .whiteHamburger .middleLine::after {
+    -webkit-transform: translate(-5px, -15px) rotate(-45deg);
+            transform: translate(-5px, -15px) rotate(-45deg);
+    width: 50px;
   }
 }
 
