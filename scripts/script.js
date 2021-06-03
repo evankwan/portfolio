@@ -92,6 +92,7 @@ app.onIntersection = (entries) => {
           currentPage = '07';
           break;
         default :
+          currentPage = '07';
           break;
       }
       app.changeNavLinkColor(currentPage);
