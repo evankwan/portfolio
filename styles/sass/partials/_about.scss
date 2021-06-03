@@ -215,6 +215,12 @@
     grid-template-columns: 1fr;
   }
 
+  .symbolContainer:nth-child(2n) {
+    @include setFlex(column, space-between, flex-end);
+
+    text-align: right;
+  }
+
   .aboutFloatingBox {
     width: 90%;
   }

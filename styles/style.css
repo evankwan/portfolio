@@ -1183,6 +1183,22 @@ section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .symbolContainer:nth-child(2n) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: right;
+  }
   .aboutFloatingBox {
     width: 90%;
   }
