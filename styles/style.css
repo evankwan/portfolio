@@ -715,7 +715,7 @@ section {
   transition: .3s ease;
 }
 
-.navSocialList .navSocialLink:hover {
+.navSocialList .navSocialLink:active, .navSocialList .navSocialLink:focus, .navSocialList .navSocialLink:hover {
   color: #61D58E;
 }
 
@@ -1444,8 +1444,8 @@ section {
 }
 
 .skillContainer:hover .skillIconContainer {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 
 .skillContainer:hover i {
@@ -1601,6 +1601,8 @@ section {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
   width: 100%;
 }
 
