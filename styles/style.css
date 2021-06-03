@@ -717,6 +717,7 @@ section {
 
 .navSocialList .navSocialLink:active, .navSocialList .navSocialLink:focus, .navSocialList .navSocialLink:hover {
   color: #61D58E;
+  outline: none;
 }
 
 .hamburgerContainer {
@@ -1440,6 +1441,10 @@ section {
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
   font-size: 7rem;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
   width: 80px;
 }
 
