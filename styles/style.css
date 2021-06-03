@@ -1500,6 +1500,10 @@ section {
   color: #0366d6;
 }
 
+.experience .sectionTitle {
+  color: #F9F9F9;
+}
+
 .roleDetails {
   border-bottom: 1px solid #F9F9F9;
   margin-bottom: 25px;
@@ -1523,6 +1527,7 @@ section {
   font-size: 2rem;
   font-weight: normal;
   letter-spacing: 1.5px;
+  font-style: italic;
   margin-bottom: 20px;
 }
 
