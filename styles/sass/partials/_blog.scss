@@ -21,8 +21,16 @@
   width: 100%;
 }
 
+.blogPostContainer:active,
+.blogPostContainer:focus,
 .blogPostContainer:hover {
   box-shadow: 2px 2px 4px $darkGrey;
+  outline: none;
+}
+
+.blogPostContainer:active > .blogPostTitle,
+.blogPostContainer:focus > .blogPostTitle {
+  font-weight: bold;
 }
 
 .blogImageContainer {
@@ -43,6 +51,7 @@
   @include setFlex(column, center, center);
   @include setFont(2rem, normal, $darkGrey, default);
 
+  border-radius: 0 0 10px 10px;
   flex-basis: 50%;
   padding: 0 20px;
   text-align: center;

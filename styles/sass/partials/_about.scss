@@ -46,6 +46,16 @@
       background-color: $white;
       width: 0;
     }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &:active::before,
+    &:focus::before {
+      background-color: $white;
+    }
   }
 }
 

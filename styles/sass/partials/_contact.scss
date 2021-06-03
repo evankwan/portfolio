@@ -59,8 +59,11 @@
   font-weight: bold;
 }
 
+.formSubmitButton:active,
+.formSubmitButton:focus,
 .formSubmitButton:hover {
   border-color: $darkGrey;
+  outline: none;
 }
 
 @media (max-width: 500px) {
