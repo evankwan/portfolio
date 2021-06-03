@@ -299,6 +299,10 @@ section {
 }
 
 .backToTopContainer {
+  padding-bottom: 80px;
+}
+
+.backToTopContainer .backToTop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,16 +310,20 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 80px;
+  color: #262626;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  width: 230px;
 }
 
-.backToTopContainer .backToTop {
+.backToTopContainer .backToTopIcon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,6 +340,7 @@ section {
   color: #262626;
   display: block;
   height: 80px;
+  margin-right: 20px;
   text-align: center;
   text-shadow: 0 24px 0 #61D58E;
   width: 80px;
@@ -472,8 +481,8 @@ section {
 }
 
 .headerImageContainer:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.1) rotate(10deg);
+          transform: scale(1.1) rotate(10deg);
 }
 
 @-webkit-keyframes slideDown {
