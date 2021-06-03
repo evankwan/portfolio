@@ -1361,6 +1361,13 @@ section {
   }
 }
 
+@media (max-width: 950px) {
+  .projects .sectionWrapper {
+    overflow: hidden;
+    width: 90%;
+  }
+}
+
 @media (max-width: 650px) {
   .projectsContainer {
     width: 100%;
