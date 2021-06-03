@@ -1134,13 +1134,19 @@ section {
   }
 }
 
+.projects .sectionWrapper {
+  overflow: hidden;
+  width: 110%;
+}
+
 .projectsContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (27vw)[2];
-      grid-template-columns: repeat(2, 27vw);
+  -ms-grid-columns: (fit-content(calc($projectsCellSize / 2)))[2];
+      grid-template-columns: repeat(2, fit-content(calc($projectsCellSize / 2)));
   -ms-grid-rows: (27vw)[4];
       grid-template-rows: repeat(4, 27vw);
+  max-width: 100%;
   position: relative;
   width: calc(2 * $projectsCellSize);
   z-index: 10;

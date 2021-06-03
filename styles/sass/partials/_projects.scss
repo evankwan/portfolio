@@ -1,7 +1,13 @@
+.projects .sectionWrapper {
+  overflow: hidden;
+  width: 110%;
+}
+
 .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(2, $projectsCellSize);
+  grid-template-columns: repeat(2, fit-content(calc($projectsCellSize / 2)));
   grid-template-rows: repeat(4, $projectsCellSize);
+  max-width: 100%;
   position: relative;
   width: calc(2 * $projectsCellSize);
   z-index: 10;
