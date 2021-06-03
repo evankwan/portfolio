@@ -1,3 +1,7 @@
+.experience .sectionTitle {
+  color: $white;
+}
+
 .roleDetails {
   border-bottom: 1px solid $white;
   margin-bottom: 25px;
@@ -17,6 +21,7 @@
 .experienceInfo {
   @include setFont(2rem, normal, $mainColorLight, 1.5px);
 
+  font-style: italic;
   margin-bottom: 20px;
 }
 
