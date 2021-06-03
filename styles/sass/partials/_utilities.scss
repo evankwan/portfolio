@@ -5,6 +5,23 @@
   width: 100%;
 }
 
+.backToTopContainer {
+  @include setFlex(row, flex-start, center);
+
+  padding-bottom: 80px;
+
+  .backToTop {
+    @include setFlex(column, center, center);
+
+    color: $darkGrey;
+    display: block;
+    height: 80px;
+    text-align: center;
+    text-shadow: 0 24px 0 $mainColor;
+    width: 80px;
+  }
+}
+
 .navLink {
   @include setFont(3rem, normal, $darkGrey, 1.5px);
 

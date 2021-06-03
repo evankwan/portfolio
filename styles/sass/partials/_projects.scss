@@ -17,6 +17,11 @@
   border: 2px solid $white;
   overflow: hidden;
   position: relative;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
 }
 
 .positiveVibesBoard {
@@ -109,8 +114,17 @@
     .projectLink {
       @include setFont(1.6rem, bold, $mainColor, 1.5px);
 
+      border: 2px solid transparent;
       margin: 20px;
+      padding: 5px;
       text-decoration: underline;
+
+      &:active,
+      &:focus {
+        border-color: $mainColor;
+        color: $white;
+        outline: none;
+      }
     }
   }
 }

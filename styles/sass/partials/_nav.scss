@@ -134,6 +134,7 @@
     &:focus,
     &:hover {
       color: $mainColor;
+      outline: none;
     }
   }
 }

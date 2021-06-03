@@ -298,6 +298,45 @@ section {
   width: 100%;
 }
 
+.backToTopContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 80px;
+}
+
+.backToTopContainer .backToTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #262626;
+  display: block;
+  height: 80px;
+  text-align: center;
+  text-shadow: 0 24px 0 #61D58E;
+  width: 80px;
+}
+
 .navLink {
   color: #262626;
   font-size: 3rem;
@@ -717,6 +756,7 @@ section {
 
 .navSocialList .navSocialLink:active, .navSocialList .navSocialLink:focus, .navSocialList .navSocialLink:hover {
   color: #61D58E;
+  outline: none;
 }
 
 .hamburgerContainer {
@@ -951,6 +991,14 @@ section {
   width: 0;
 }
 
+.resumeBreakListItem .resumeBreakLink:active, .resumeBreakListItem .resumeBreakLink:focus {
+  outline: none;
+}
+
+.resumeBreakListItem .resumeBreakLink:active::before, .resumeBreakListItem .resumeBreakLink:focus::before {
+  background-color: #F9F9F9;
+}
+
 .symbolsContainer {
   display: -ms-grid;
   display: grid;
@@ -1158,6 +1206,10 @@ section {
   position: relative;
 }
 
+.projectPreview:active, .projectPreview:focus {
+  outline: none;
+}
+
 .positiveVibesBoard {
   background-image: url(../assets/positive-vibes-only.png);
   background-position: top center;
@@ -1303,8 +1355,16 @@ section {
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1.5px;
+  border: 2px solid transparent;
   margin: 20px;
+  padding: 5px;
   text-decoration: underline;
+}
+
+.projectDetails .projectLinksContainer .projectLink:active, .projectDetails .projectLinksContainer .projectLink:focus {
+  border-color: #61D58E;
+  color: #F9F9F9;
+  outline: none;
 }
 
 @media (max-width: 1250px) {
@@ -1440,6 +1500,10 @@ section {
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
   font-size: 7rem;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
   width: 80px;
 }
 
@@ -1597,9 +1661,17 @@ section {
   width: 100%;
 }
 
+.blogPostContainer:active,
+.blogPostContainer:focus,
 .blogPostContainer:hover {
   -webkit-box-shadow: 2px 2px 4px #262626;
           box-shadow: 2px 2px 4px #262626;
+  outline: none;
+}
+
+.blogPostContainer:active > .blogPostTitle,
+.blogPostContainer:focus > .blogPostTitle {
+  font-weight: bold;
 }
 
 .blogImageContainer {
@@ -1637,6 +1709,7 @@ section {
   font-size: 2rem;
   font-weight: normal;
   letter-spacing: default;
+  border-radius: 0 0 10px 10px;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   padding: 0 20px;
@@ -1790,8 +1863,11 @@ section {
   font-weight: bold;
 }
 
+.formSubmitButton:active,
+.formSubmitButton:focus,
 .formSubmitButton:hover {
   border-color: #262626;
+  outline: none;
 }
 
 @media (max-width: 500px) {
