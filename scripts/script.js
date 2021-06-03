@@ -75,12 +75,21 @@ app.onIntersection = (entries) => {
           break;
         case 'about' :
           currentPage = '02';
+          app.projectPreviews.forEach((project) => {
+            project.classList.remove('noBgImage');
+          });
           break;
         case 'projects' :
           currentPage = '03';
+          app.projectPreviews.forEach((project) => {
+            project.classList.remove('noBgImage');
+          });
           break;
         case 'skills' :
           currentPage = '04';
+          app.projectPreviews.forEach((project) => {
+            project.classList.remove('noBgImage');
+          });
           break;
         case 'experience' :
           currentPage = '05';

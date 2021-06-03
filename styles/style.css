@@ -1298,6 +1298,10 @@ section {
   grid-area: 4 / 1 / span 1 / span 2;
 }
 
+.noBgImage {
+  background-image: none;
+}
+
 .projectPreview:hover > .projectDetails,
 .projectPreview:focus > .projectDetails,
 .projectFocused > .projectDetails {
