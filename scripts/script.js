@@ -95,13 +95,13 @@ app.onIntersection = (entries) => {
           currentPage = '05';
           break;
         case 'blog' :
-          currentPage = '06';
+          currentPage = '05';
           break;
         case 'contact' :
-          currentPage = '07';
+          currentPage = '06';
           break;
         default :
-          currentPage = '07';
+          currentPage = '06';
           break;
       }
       app.changeNavLinkColor(currentPage);
