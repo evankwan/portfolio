@@ -53,7 +53,6 @@ app.eventListeners = () => {
 
 app.changePageNumber = () => {
   const config = {
-    root: document.body,
     threshold: 0,
     rootMargin: '-400px'
   }
