@@ -1236,7 +1236,7 @@ section {
 }
 
 .positiveVibesBoard {
-  background-image: url(../assets/positive-vibes-only.webp);
+  background-image: url(../assets/positive-vibes-only.webp), url(../assets/positive-vibes-only.png);
   background-position: top center;
   background-size: cover;
   border-right: 4px solid #F9F9F9;
@@ -1250,7 +1250,7 @@ section {
 }
 
 .pokemonBlackjack {
-  background-image: url(../assets/pokemon-blackjack.webp);
+  background-image: url(../assets/pokemon-blackjack.webp), url(../assets/pokemon-blackjack.png);
   background-position: center center;
   background-size: cover;
   -ms-grid-row: 2;
@@ -1261,7 +1261,7 @@ section {
 }
 
 .cratedigger {
-  background-image: url(../assets/cratedigger.webp);
+  background-image: url(../assets/cratedigger.webp), url(../assets/cratedigger.png);
   background-position: center center;
   background-size: cover;
   border-right: 4px solid #F9F9F9;
@@ -1273,7 +1273,7 @@ section {
 }
 
 .captured {
-  background-image: url(../assets/captured.webp);
+  background-image: url(../assets/captured.webp), url(../assets/captured.png);
   background-position: center center;
   background-size: cover;
   border-right: 4px solid #F9F9F9;
@@ -1285,7 +1285,7 @@ section {
 }
 
 .scattergories {
-  background-image: url(../assets/scattergories.webp);
+  background-image: url(../assets/scattergories.webp), url(../assets/scattergories.png);
   background-position: top center;
   background-size: cover;
   border-bottom: 4px solid #F9F9F9;
