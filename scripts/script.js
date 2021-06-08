@@ -72,7 +72,6 @@ app.changePageNumber = () => {
 }
 
 app.onIntersection = (entries) => {
-  console.log(entries);
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const { target } = entry;
