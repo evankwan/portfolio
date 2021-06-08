@@ -1,6 +1,8 @@
 .projects .sectionWrapper {
   overflow: hidden;
-  width: 110%;
+  position: relative;
+  left: 10%;
+  width: 100%;
 }
 
 .projectsContainer {
@@ -182,12 +184,18 @@
 
 @media (max-width: 950px) {
   .projects .sectionWrapper {
+    left: 5%;;
     overflow: hidden;
     width: 90%;
   }
 }
 
 @media (max-width: 650px) {
+  .projects .sectionWrapper {
+    left: 0;
+    width: 100%;
+  }
+
   .projectsContainer {
     width: 100%;
   }

@@ -78,6 +78,20 @@
   position: relative;
 }
 
+
+.subSectionHeading::after {
+  background-color: $mainColor;
+  border-radius: 100px;
+  content: '';
+  height: calc(100% + 20px);
+  left: -80px;
+  min-width: 280px;
+  position: absolute;
+  top: -10px;
+  width: 80%;
+  z-index: -10;
+}
+
 .wrapper {
   margin: 0 0 0 auto;
   max-width: 900px;
@@ -91,11 +105,16 @@
 }
 
 @media (max-width: 650px) {
-  .wrapper {
-    width: 95%;
-  }
-
   .sectionWrapper {
     width: 100%;
+  }
+
+  .subSectionHeading::after {
+    min-width: 325px;
+    width: 90%;
+  }
+
+  .wrapper {
+    width: 95%;
   }
 }
