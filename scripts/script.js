@@ -16,7 +16,9 @@ app.selectors = () => {
   app.navLinks = document.querySelectorAll('.navListItemLink');
   app.navMenu = document.getElementById('navMenu')
   app.projectPreviews = document.querySelectorAll('.projectPreview');
-  app.sections = document.querySelectorAll('section');
+  app.sectionTitles = document.querySelectorAll('h1, .sectionTitle');
+
+  console.log(app.sectionTitles);
 }
 
 app.eventListeners = () => {
@@ -54,55 +56,56 @@ app.eventListeners = () => {
 app.changePageNumber = () => {
   const config = {
     root: null,
-    threshold: 0,
+    threshold: 0.01,
     rootMargin: '0px'
   }
 
   app.observer = new IntersectionObserver(app.onIntersection, config);
   app.observer.observe(app.header);
-  app.sections.forEach((section) => {
+  app.sectionTitles.forEach((section) => {
     app.observer.observe(section);
   })
 }
 
 app.onIntersection = (entries) => {
+  console.log(entries);
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const { target } = entry;
       let currentPage = '01';
       switch (target.id) {
-        case 'home' :
+        case 'pageTitle' :
           currentPage = '01';
           break;
-        case 'about' :
+        case 'aboutTitle' :
           currentPage = '02';
           app.projectPreviews.forEach((project) => {
             project.classList.remove('noBgImage');
           });
           break;
-        case 'projects' :
+        case 'projectsTitle' :
           currentPage = '03';
           app.projectPreviews.forEach((project) => {
             project.classList.remove('noBgImage');
           });
           break;
-        case 'skills' :
+        case 'skillsTitle' :
           currentPage = '04';
           app.projectPreviews.forEach((project) => {
             project.classList.remove('noBgImage');
           });
           break;
-        case 'experience' :
+        // case 'experience' :
+        //   currentPage = '05';
+        //   break;
+        case 'blogTitle' :
           currentPage = '05';
           break;
-        case 'blog' :
-          currentPage = '05';
-          break;
-        case 'contact' :
+        case 'contactTitle' :
           currentPage = '06';
           break;
         default :
-          currentPage = '06';
+          currentPage = '01';
           break;
       }
       app.changeNavLinkColor(currentPage);
