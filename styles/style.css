@@ -1307,6 +1307,10 @@ section {
   grid-area: 4 / 1 / span 1 / span 2;
 }
 
+.noBgImage {
+  background-image: none;
+}
+
 .projectPreview:hover > .projectDetails,
 .projectPreview:focus > .projectDetails,
 .projectFocused > .projectDetails {
@@ -1330,7 +1334,7 @@ section {
           align-items: center;
   background-color: #262626;
   color: #F9F9F9;
-  height: 100%;
+  height: calc(100% - 72px);
   left: -100%;
   opacity: 0;
   padding: 20px 30px;
@@ -1368,7 +1372,7 @@ section {
   margin-top: 20px;
 }
 
-.projectDetails .projectLinksContainer {
+.projectLinksContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1382,9 +1386,16 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #262626;
+  border-top: 1px solid #F9F9F9;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
 }
 
-.projectDetails .projectLinksContainer .projectLink {
+.projectLinksContainer .projectLink {
   color: #61D58E;
   font-size: 1.6rem;
   font-weight: bold;
@@ -1395,7 +1406,7 @@ section {
   text-decoration: underline;
 }
 
-.projectDetails .projectLinksContainer .projectLink:active, .projectDetails .projectLinksContainer .projectLink:focus {
+.projectLinksContainer .projectLink:active, .projectLinksContainer .projectLink:focus {
   border-color: #61D58E;
   color: #F9F9F9;
   outline: none;
@@ -1470,6 +1481,15 @@ section {
   }
   .projectsContainer {
     width: 100%;
+  }
+  .projectDetails {
+    padding: 10px 20px;
+  }
+  .projectDetails .projectTitle {
+    font-size: 2.8rem;
+  }
+  .projectDetails .projectDescription {
+    font-size: 1.4rem;
   }
   .pokemonBlackjack {
     background-position: bottom -300px center;

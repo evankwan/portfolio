@@ -69,9 +69,9 @@
   grid-area: 4 / 1 / span 1 / span 2;
 }
 
-// .noBgImage {
-//   background-image: none;
-// }
+.noBgImage {
+  background-image: none;
+}
 
 .projectPreview:hover > .projectDetails,
 .projectPreview:focus > .projectDetails,
@@ -85,7 +85,7 @@
 
   background-color: $darkGrey;
   color: $white;
-  height: 100%;
+  height: calc(100% - 72px);
   left: -100%;
   opacity: 0;
   padding: 20px 30px;
@@ -113,24 +113,32 @@
     line-height: 1.4;
     margin-top: 20px;
   }
+}
 
-  .projectLinksContainer {
-    @include setFlex(row, center, center);
+.projectLinksContainer {
+  @include setFlex(row, center, center);
 
-    .projectLink {
-      @include setFont(1.6rem, bold, $mainColor, 1.5px);
+  background-color: $darkGrey;
+  border-top: 1px solid $white;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
 
-      border: 2px solid transparent;
-      margin: 20px;
-      padding: 5px;
-      text-decoration: underline;
+  .projectLink {
+    @include setFont(1.6rem, bold, $mainColor, 1.5px);
 
-      &:active,
-      &:focus {
-        border-color: $mainColor;
-        color: $white;
-        outline: none;
-      }
+    border: 2px solid transparent;
+    margin: 20px;
+    padding: 5px;
+    text-decoration: underline;
+
+    &:active,
+    &:focus {
+      border-color: $mainColor;
+      color: $white;
+      outline: none;
     }
   }
 }
@@ -199,6 +207,19 @@
   .projectsContainer {
     width: 100%;
   }
+
+  .projectDetails {
+    padding: 10px 20px;
+
+    .projectTitle {
+      font-size: 2.8rem;
+    }
+
+    .projectDescription {
+      font-size: 1.4rem;
+    }
+  }
+  
 
   .pokemonBlackjack {
     background-position: bottom -300px center;
