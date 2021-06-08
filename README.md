@@ -1,4 +1,4 @@
-# MY Portfolio
+# My Portfolio
 
 https://www.evankwan.com
 
@@ -11,6 +11,5 @@ What you can expect to see SOON:
 - building a custom form submit page
 - currently learning section
 - tab order to skip navigation unless it's open
-- investigating Intersection Observer issues
 - moving some sections around
 - paralax effects
