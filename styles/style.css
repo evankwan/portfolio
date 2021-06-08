@@ -1647,11 +1647,19 @@ section {
 }
 
 .blogPostsContainer {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 10px;
-  -ms-grid-columns: (minmax(200px, 1fr))[3];
-      grid-template-columns: repeat(3, minmax(200px, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .blogIntroText {
@@ -1666,10 +1674,10 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1680,7 +1688,8 @@ section {
   border-radius: 10px;
   -webkit-box-shadow: 1px 1px 2px #262626;
           box-shadow: 1px 1px 2px #262626;
-  height: 250px;
+  margin: 10px 0;
+  padding: 50px 20px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
   width: 100%;
@@ -1697,23 +1706,6 @@ section {
 .blogPostContainer:active > .blogPostTitle,
 .blogPostContainer:focus > .blogPostTitle {
   font-weight: bold;
-}
-
-.blogImageContainer {
-  border-radius: 10px 10px 0 0;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  overflow: hidden;
-  width: 100%;
-}
-
-.blogImageContainer img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
-  width: 100%;
 }
 
 .blogPostTitle {
@@ -1735,46 +1727,27 @@ section {
   font-weight: normal;
   letter-spacing: default;
   border-radius: 0 0 10px 10px;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
   padding: 0 20px;
   text-align: center;
 }
 
+.blogPostDate {
+  color: #228147;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: default;
+}
+
 .moreToCome {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #61D58E;
   font-size: 2rem;
   font-weight: normal;
   letter-spacing: default;
-  background-color: #262626;
-  border-radius: 10px;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  padding: 0 20px;
+  background-color: #61D58E;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  .blogPostsContainer {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 10px;
-    -ms-grid-columns: (minmax(180px, 1fr))[2];
-        grid-template-columns: repeat(2, minmax(180px, 1fr));
-  }
   .blogPostContainer {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
@@ -1784,14 +1757,6 @@ section {
 }
 
 @media (max-width: 420px) {
-  .blogPostsContainer {
-    -ms-grid-columns: 250px;
-        grid-template-columns: 250px;
-    margin: 0 auto;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-  }
   .blogPostContainer {
     margin: 0 auto;
   }
@@ -1924,15 +1889,16 @@ section {
 
 .creditsTitle {
   color: #262626;
-  font-size: 3rem;
+  font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1.5px;
+  cursor: pointer;
   margin-bottom: 40px;
 }
 
 .credit {
   color: #262626;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: normal;
   letter-spacing: 1.5px;
   margin-bottom: 20px;
@@ -1941,4 +1907,17 @@ section {
 .creditLink {
   color: #262626;
   text-decoration: underline;
+}
+
+.creditList {
+  font-size: 1.2rem;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.hideList {
+  font-size: 0rem;
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
 }

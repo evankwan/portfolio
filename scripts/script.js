@@ -7,6 +7,8 @@ app.init = () => {
 }
 
 app.selectors = () => {
+  app.creditsList = document.getElementById('creditList');
+  app.creditsTitle = document.getElementById('creditsTitle');
   app.currentPageNumber = document.getElementById('currentPageNumber');
   app.hamburger = document.getElementById('hamburger');
   app.hamburgerContainer = document.getElementById('hamburgerContainer');
@@ -16,9 +18,7 @@ app.selectors = () => {
   app.navLinks = document.querySelectorAll('.navListItemLink');
   app.navMenu = document.getElementById('navMenu')
   app.projectPreviews = document.querySelectorAll('.projectPreview');
-  app.sectionTitles = document.querySelectorAll('h1, .sectionTitle');
-
-  console.log(app.sectionTitles);
+  app.sections = document.querySelectorAll('section');
 }
 
 app.eventListeners = () => {
@@ -51,18 +51,22 @@ app.eventListeners = () => {
       }
     })
   })
+
+  app.creditsTitle.addEventListener('click', () => {
+    app.creditsList.classList.toggle('hideList');
+  })
 }
 
 app.changePageNumber = () => {
   const config = {
     root: null,
-    threshold: 0.01,
+    threshold: [0.25],
     rootMargin: '0px'
   }
 
   app.observer = new IntersectionObserver(app.onIntersection, config);
   app.observer.observe(app.header);
-  app.sectionTitles.forEach((section) => {
+  app.sections.forEach((section) => {
     app.observer.observe(section);
   })
 }
@@ -74,38 +78,36 @@ app.onIntersection = (entries) => {
       const { target } = entry;
       let currentPage = '01';
       switch (target.id) {
-        case 'pageTitle' :
+        case 'home' :
           currentPage = '01';
           break;
-        case 'aboutTitle' :
+        case 'about' :
           currentPage = '02';
           app.projectPreviews.forEach((project) => {
             project.classList.remove('noBgImage');
           });
           break;
-        case 'projectsTitle' :
+        case 'projects' :
           currentPage = '03';
           app.projectPreviews.forEach((project) => {
             project.classList.remove('noBgImage');
           });
           break;
-        case 'skillsTitle' :
+        case 'skills' :
           currentPage = '04';
           app.projectPreviews.forEach((project) => {
             project.classList.remove('noBgImage');
           });
           break;
-        // case 'experience' :
-        //   currentPage = '05';
-        //   break;
-        case 'blogTitle' :
+        case 'blog' :
           currentPage = '05';
           break;
-        case 'contactTitle' :
+        case 'contact' :
+        case 'credits' :
           currentPage = '06';
           break;
         default :
-          currentPage = '01';
+          currentPage = '06';
           break;
       }
       app.changeNavLinkColor(currentPage);

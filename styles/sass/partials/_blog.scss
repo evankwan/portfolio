@@ -1,7 +1,5 @@
 .blogPostsContainer {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  @include setFlex(column, center, center);
 }
 
 .blogIntroText {
@@ -11,12 +9,13 @@
 }
 
 .blogPostContainer {
-  @include setFlex(column, space-between, center);
+  @include setFlex(row, space-between, center);
 
   background-color: $white;
   border-radius: 10px;
   box-shadow: 1px 1px 2px $darkGrey;
-  height: 250px;
+  margin: 10px 0;
+  padding: 50px 20px;
   transition: .3s ease;
   width: 100%;
 }
@@ -33,48 +32,27 @@
   font-weight: bold;
 }
 
-.blogImageContainer {
-  border-radius: 10px 10px 0 0;
-  flex-basis: 50%;
-  overflow: hidden;
-  width: 100%;
-}
-
-.blogImageContainer img {
-  display: block;
-  object-fit: cover;
-  object-position: center bottom;
-  width: 100%;
-}
-
 .blogPostTitle {
   @include setFlex(column, center, center);
   @include setFont(2rem, normal, $darkGrey, default);
 
   border-radius: 0 0 10px 10px;
-  flex-basis: 50%;
   padding: 0 20px;
   text-align: center;
 }
 
+.blogPostDate {
+  @include setFont(2rem, normal, $mainColorDark, default);
+}
+
 .moreToCome {
-  @include setFlex(column, center, center);
   @include setFont(2rem, normal, $mainColor, default);
 
-  background-color: $darkGrey;
-  border-radius: 10px;
-  flex-basis: 100%;
-  padding: 0 20px;
+  background-color: $mainColor;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  .blogPostsContainer {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, minmax(180px, 1fr));
-  }
-
   .blogPostContainer {
     flex-grow: 0;
     max-width: 230px;
@@ -82,12 +60,6 @@
 }
 
 @media (max-width: 420px) {
-  .blogPostsContainer {
-    grid-template-columns: 250px;
-    margin: 0 auto;
-    width: min-content;
-  }
-
   .blogPostContainer {
     margin: 0 auto;
   }

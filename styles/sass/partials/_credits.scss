@@ -3,12 +3,14 @@
 }
 
 .creditsTitle {
-  @include setFont(3rem, bold, $darkGrey, 1.5px);
+  @include setFont(1.6rem, bold, $darkGrey, 1.5px);
+
+  cursor: pointer;
   margin-bottom: 40px;
 }
 
 .credit {
-  @include setFont(1.6rem, normal, $darkGrey, 1.5px);
+  @include setFont(1.2rem, normal, $darkGrey, 1.5px);
 
   margin-bottom: 20px;
 }
@@ -16,4 +18,16 @@
 .creditLink {
   color: $darkGrey;
   text-decoration: underline;
+}
+
+.creditList {
+  font-size: 1.2rem; 
+  transition: $standardTransition;
+}
+
+.hideList {
+  font-size: 0rem;
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
 }
