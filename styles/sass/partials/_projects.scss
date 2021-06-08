@@ -85,7 +85,7 @@
 
   background-color: $darkGrey;
   color: $white;
-  height: calc(100% - 72px);
+  height: calc(100% - #{$projectLinksContainerHeight});
   left: -100%;
   opacity: 0;
   padding: 20px 30px;
@@ -121,6 +121,7 @@
   background-color: $darkGrey;
   border-top: 1px solid $white;
   bottom: 0;
+  height: $projectLinksContainerHeight;
   left: 0;
   position: absolute;
   width: 100%;

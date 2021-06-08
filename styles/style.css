@@ -1334,7 +1334,7 @@ section {
           align-items: center;
   background-color: #262626;
   color: #F9F9F9;
-  height: calc(100% - 72px);
+  height: calc(100% - 75px);
   left: -100%;
   opacity: 0;
   padding: 20px 30px;
@@ -1389,6 +1389,7 @@ section {
   background-color: #262626;
   border-top: 1px solid #F9F9F9;
   bottom: 0;
+  height: 75px;
   left: 0;
   position: absolute;
   width: 100%;
