@@ -53,8 +53,9 @@ app.eventListeners = () => {
 
 app.changePageNumber = () => {
   const config = {
+    root: null,
     threshold: 0,
-    rootMargin: '-400px'
+    rootMargin: '0px'
   }
 
   app.observer = new IntersectionObserver(app.onIntersection, config);
