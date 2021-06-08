@@ -18,7 +18,7 @@ app.selectors = () => {
   app.navLinks = document.querySelectorAll('.navListItemLink');
   app.navMenu = document.getElementById('navMenu')
   app.projectPreviews = document.querySelectorAll('.projectPreview');
-  app.sections = document.querySelectorAll('section');
+  app.sections = document.querySelectorAll('header, section');
 }
 
 app.eventListeners = () => {
@@ -60,7 +60,7 @@ app.eventListeners = () => {
 app.changePageNumber = () => {
   const config = {
     root: null,
-    threshold: [0.25],
+    threshold: [0.36, 0.7],
     rootMargin: '0px'
   }
 
@@ -103,7 +103,6 @@ app.onIntersection = (entries) => {
           currentPage = '05';
           break;
         case 'contact' :
-        case 'credits' :
           currentPage = '06';
           break;
         default :

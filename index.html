@@ -123,6 +123,9 @@
             </li>
           </ul>
         </div>
+
+        <p id="summary" class="sectionText">Outside of my dev work my life is filled with consuming everything Star Wars, weekly trips to the tennis courts, cooking and eating new food, and being miserable from yet another disappointing Leafs season.</p>
+
       </div>
     </div>    
   </section>
@@ -226,7 +229,7 @@
   </div>
 
   <!-- skills -->
-  <section id="skills">
+  <section id="skills" class="skills">
     <div class="wrapper">
       <div class="sectionWrapper">
         <h2 id="skillsTitle" class="sectionTitle">Skills</h2>
@@ -316,14 +319,26 @@
             <p class="skillTitle">GitHub</p>
           </div>
         </div>
+        <h3 class="subSectionHeading">Learning</h3>
+        <div class="skillsContainer">
+          <!-- testing -->
+          <div class="skillContainer skillTesting">
+            <div class="skillIconContainer">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <p class="skillTitle">Testing</p>
+          </div>
+          <!-- MERN -->
+          <div class="skillContainer skillMERN">
+            <div class="skillIconContainer">
+              <i class="devicon-mongodb-plain"></i>
+            </div>
+            <p class="skillTitle">MERN</p>
+          </div>
       </div>
     </div>
   </section>
   <!-- end skills -->
-
-  <div class="wrapper navLinkContainer">
-    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
-  </div>
 
   <div class="wrapper navLinkContainer">
     <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
@@ -372,6 +387,7 @@
             <p class="contactMethod">email</p>
           </div>
         </div>
+        <h3 class="contactSubHeading">Leave a note</h3>
         <form method="POST" id="contactForm" class="contactForm" data-netlify="true" name="contactForm">
           <label for="nameField" class="srOnly">Name</label>
           <input type="text" name="name" id="nameField" class="nameField" placeholder="Name" required>
@@ -386,53 +402,52 @@
         </form>
       </div>
     </div>
-  </section>
-  <!-- end contact -->
-
-  <div class="wrapper navLinkContainer">
-    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
-  </div>
-
-  <!-- credits -->
-  <section id="credits" class="credits">
-    <div class="wrapper">
-      <div class="sectionWrapper">
-        <h2 id="creditsTitle" class="creditsTitle">Click to see credits</h2>
-        <ul id="creditList" class="creditList hideList">
-          <li class="credit">
-            <a href="https://thenounproject.com/term/wok/1682066/" class="creditLink" target="_blank" rel="noopener norefferer">'Wok'</a> 
-            icon by Template from 
-            <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a>
-          </li>
-
-          <li class="credit">
-            <a href="https://thenounproject.com/term/maple-leaf/1551209/" class="creditLink" target="_blank" rel="noopener norefferer">'Maple Leaf'</a> 
-            icon by mynamepong from 
-            <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a>
-          </li>
-
-          <li class="credit">
-            <a href="https://thenounproject.com/term/tennis/3178238/" class="creditLink" target="_blank" rel="noopener norefferer">'Tennis'</a> 
-            icon by JunGSa from 
-            <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a>
-          </li>
-
-          <li class="credit">
-            <a href="https://thenounproject.com/term/x-wing/1571953/" class="creditLink" target="_blank" rel="noopener norefferer">'X Wing'</a> 
-            icon by Ben Davis from 
-            <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun Project</a>
-          </li>
-        </ul>
-        
+    <!-- credits -->
+    <div id="credits" class="credits">
+      <div class="wrapper">
+        <div class="sectionWrapper">
+          <h2 id="creditsTitle" class="creditsTitle">Click to see credits</h2>
+          <ul id="creditList" class="creditList hideList">
+            <li class="credit">
+              <a href="https://thenounproject.com/term/wok/1682066/" class="creditLink" target="_blank"
+                rel="noopener norefferer">'Wok'</a>
+              icon by Template from
+              <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun
+                Project</a>
+            </li>
+    
+            <li class="credit">
+              <a href="https://thenounproject.com/term/maple-leaf/1551209/" class="creditLink" target="_blank"
+                rel="noopener norefferer">'Maple Leaf'</a>
+              icon by mynamepong from
+              <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun
+                Project</a>
+            </li>
+    
+            <li class="credit">
+              <a href="https://thenounproject.com/term/tennis/3178238/" class="creditLink" target="_blank"
+                rel="noopener norefferer">'Tennis'</a>
+              icon by JunGSa from
+              <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun
+                Project</a>
+            </li>
+    
+            <li class="credit">
+              <a href="https://thenounproject.com/term/x-wing/1571953/" class="creditLink" target="_blank"
+                rel="noopener norefferer">'X Wing'</a>
+              icon by Ben Davis from
+              <a href="https://thenounproject.com/" class="creditLink" target="_blank" rel="noopener norefferer">the Noun
+                Project</a>
+            </li>
+          </ul>
+    
+        </div>
       </div>
     </div>
+    <!-- end credits -->
   </section>
-  <!-- end credits -->
-
-  <div class="wrapper navLinkContainer">
-    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
-  </div>
-
+  <!-- end contact -->
+  
   <div class="wrapper backToTopContainer">
     <div class="sectionWrapper">
       <a href="#home" class="backToTop">
@@ -441,6 +456,11 @@
       </a>
     </div>
   </div>
+
+  <div class="wrapper navLinkContainer">
+    <a href="#nav" tabindex="0" class="navLink">Go To Navigation Menu</a>
+  </div>
+
 
   <!-- javascript -->
   <script src="./scripts/script.js"></script>

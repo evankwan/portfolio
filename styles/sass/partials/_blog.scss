@@ -15,7 +15,7 @@
   border-radius: 10px;
   box-shadow: 1px 1px 2px $darkGrey;
   margin: 10px 0;
-  padding: 50px 20px;
+  padding: 60px 30px;
   transition: .3s ease;
   width: 100%;
 }
@@ -37,8 +37,6 @@
   @include setFont(2rem, normal, $darkGrey, default);
 
   border-radius: 0 0 10px 10px;
-  padding: 0 20px;
-  text-align: center;
 }
 
 .blogPostDate {
@@ -52,15 +50,19 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .blogPostContainer {
-    flex-grow: 0;
-    max-width: 230px;
-  }
-}
-
 @media (max-width: 420px) {
   .blogPostContainer {
-    margin: 0 auto;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 30px 10px;
+  }
+
+  .blogPostDate {
+    margin-bottom: 20px;
+  }
+
+  .blogPostTitle {
+    text-align: center;
   }
 }
