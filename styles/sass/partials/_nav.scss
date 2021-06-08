@@ -279,11 +279,13 @@
   }
 
   .whiteHamburger .middleLine::before {
+    -webkit-transform: translate(-5px, 15px) rotate(45deg);
     transform: translate(-5px, 15px) rotate(45deg);
     width: 50px;
   }
 
   .whiteHamburger .middleLine::after {
+    -webkit-transform: translate(-5px, -15px) rotate(-45deg);
     transform: translate(-5px, -15px) rotate(-45deg);
     width: 50px;
   }
