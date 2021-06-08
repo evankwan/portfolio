@@ -1226,12 +1226,50 @@ section {
   display: grid;
   -ms-grid-columns: (fit-content(calc($projectsCellSize / 2)))[2];
       grid-template-columns: repeat(2, fit-content(calc($projectsCellSize / 2)));
-  -ms-grid-rows: (27vw)[4];
-      grid-template-rows: repeat(4, 27vw);
+  -ms-grid-rows: 100px (27vw)[4];
+      grid-template-rows: 100px repeat(4, 27vw);
   max-width: 100%;
   position: relative;
   width: calc(2 * $projectsCellSize);
   z-index: 10;
+}
+
+.projectsGuide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #61D58E;
+  background-position: top center;
+  background-size: cover;
+  border-right: 4px solid #F9F9F9;
+  border-top: 4px solid #F9F9F9;
+  border-radius: 20px 20px 0 0;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / span 1 / span 2;
+}
+
+.projectsGuide .projectsGuideText::after {
+  color: #262626;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  content: 'Hover on project for details';
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .projectPreview {
@@ -1250,39 +1288,26 @@ section {
   background-size: cover;
   border-right: 4px solid #F9F9F9;
   border-top: 4px solid #F9F9F9;
-  border-radius: 20px 20px 0 0;
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-area: 1 / 1 / span 1 / span 2;
+  grid-area: 2 / 1 / span 1 / span 2;
 }
 
 .pokemonBlackjack {
   background-image: url(../assets/pokemon-blackjack.webp), url(../assets/pokemon-blackjack.png);
   background-position: center center;
   background-size: cover;
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-  grid-area: 2 / 1 / span 2 / span 1;
+  grid-area: 3 / 1 / span 2 / span 1;
 }
 
 .cratedigger {
   background-image: url(../assets/cratedigger.webp), url(../assets/cratedigger.png);
-  background-position: center center;
-  background-size: cover;
-  border-right: 4px solid #F9F9F9;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 2 / 2 / span 1 / span 1;
-}
-
-.captured {
-  background-image: url(../assets/captured.webp), url(../assets/captured.png);
   background-position: center center;
   background-size: cover;
   border-right: 4px solid #F9F9F9;
@@ -1291,6 +1316,18 @@ section {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 3 / 2 / span 1 / span 1;
+}
+
+.captured {
+  background-image: url(../assets/captured.webp), url(../assets/captured.png);
+  background-position: center center;
+  background-size: cover;
+  border-right: 4px solid #F9F9F9;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 2 / span 1 / span 1;
 }
 
 .scattergories {
@@ -1424,8 +1461,8 @@ section {
     grid-auto-rows: 300px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 300px;
-        grid-template-rows: 300px;
+    -ms-grid-rows: 100px 300px;
+        grid-template-rows: 100px 300px;
     width: 120%;
     z-index: 10;
   }
@@ -1434,36 +1471,48 @@ section {
     -ms-grid-column-span: 1;
     grid-column: 1 / span 1;
   }
+  .projectsGuide,
   .projectPreview {
     border: 2px solid #F9F9F9;
     width: 100%;
   }
-  .positiveVibesBoard {
+  .projectsGuide {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / span 1;
   }
-  .pokemonBlackjack {
+  .positiveVibesBoard {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / span 1;
-    background-position: bottom -230px center;
   }
-  .cratedigger {
+  .pokemonBlackjack {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / span 1;
+    background-position: bottom -230px center;
   }
-  .captured {
-    background-position: center left;
+  .cratedigger {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4 / span 1;
   }
-  .scattergories {
+  .captured {
+    background-position: center left;
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5 / span 1;
+  }
+  .scattergories {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / span 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projectsGuide .projectsGuideText::after {
+    content: 'Click on project for details';
   }
 }
 
@@ -1472,6 +1521,9 @@ section {
     left: 5%;
     overflow: hidden;
     width: 90%;
+  }
+  .projectsGuide .projectsGuideText::after {
+    font-size: 2rem;
   }
 }
 
@@ -1482,6 +1534,10 @@ section {
   }
   .projectsContainer {
     width: 100%;
+  }
+  .projectsGuide .projectsGuideText::after {
+    font-size: 1.6rem;
+    text-align: center;
   }
   .projectDetails {
     padding: 10px 20px;
@@ -1494,6 +1550,12 @@ section {
   }
   .pokemonBlackjack {
     background-position: bottom -300px center;
+  }
+}
+
+@media (max-width: 360px) {
+  .projectsGuide .projectsGuideText::after {
+    font-size: 1.2rem;
   }
 }
 
