@@ -1251,8 +1251,9 @@ section {
   background-color: #61D58E;
   background-position: top center;
   background-size: cover;
-  border-right: 4px solid #F9F9F9;
-  border-top: 4px solid #F9F9F9;
+  border: 4px solid #F9F9F9;
+  border-left: 2px solid #F9F9F9;
+  border-bottom: none;
   border-radius: 20px 20px 0 0;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
