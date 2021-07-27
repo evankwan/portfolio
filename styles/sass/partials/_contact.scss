@@ -29,7 +29,7 @@
 .contactForm {
   @include setFlex(column, space-between, center);
 
-  margin: 40px auto 0;
+  margin: 40px auto;
   row-gap: 20px;
   width: 100%;
 }
@@ -69,34 +69,6 @@
 .formSubmitButton:hover {
   border-color: $darkGrey;
   outline: none;
-}
-
-.credits {
-  margin-top: 50px;
-}
-
-.creditsTitle {
-  @include setFont(1.6rem, bold, $darkGrey, 1.5px);
-
-  cursor: pointer;
-  margin-bottom: 40px;
-}
-
-.credit {
-  @include setFont(1.2rem, normal, $darkGrey, 1.5px);
-
-  margin-bottom: 20px;
-}
-
-.creditLink {
-  color: $darkGrey;
-  text-decoration: underline;
-}
-
-.creditList {
-  font-size: 1.2rem; 
-  height: 150px;
-  transition: $standardTransition;
 }
 
 .hideList {

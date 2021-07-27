@@ -33,7 +33,7 @@
     &::before {
       background-color: $darkGrey;
       bottom: -5px;
-      content: '';
+      content: "";
       display: block;
       height: 2px;
       right: 0;
@@ -94,7 +94,7 @@
   &::before {
     background-color: transparent;
     bottom: -5px;
-    content: '';
+    content: "";
     display: block;
     height: 2px;
     right: 0;
@@ -137,7 +137,6 @@
   @include setFont(1.6rem, normal, $darkGrey, 1px);
 }
 
-
 @media (max-width: 1400px) {
   .symbolsContainer {
     grid-template-columns: repeat(2, 1fr);
@@ -160,14 +159,14 @@
 
   .resumeBreakList {
     align-items: stretch;
-    flex-direction: column;
-    padding: 20px;
+    flex-direction: row;
+    padding: 40px;
     row-gap: 10px;
     text-align: left;
   }
 
   .resumeBreakListItem {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 0;
     padding: 10px 20px;
   }

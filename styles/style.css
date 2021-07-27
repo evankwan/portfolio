@@ -1008,7 +1008,7 @@ section {
 .resumeBreakListItem .resumeBreakLink::before {
   background-color: #262626;
   bottom: -5px;
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   right: 0;
@@ -1074,7 +1074,7 @@ section {
 .iconHeading::before {
   background-color: transparent;
   bottom: -5px;
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   right: 0;
@@ -1148,16 +1148,16 @@ section {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 20px;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 40px;
     row-gap: 10px;
     text-align: left;
   }
   .resumeBreakListItem {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 0;
     padding: 10px 20px;
   }
@@ -1968,7 +1968,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px auto 0;
+  margin: 40px auto;
   row-gap: 20px;
   width: 100%;
 }
@@ -2010,39 +2010,6 @@ section {
 .formSubmitButton:hover {
   border-color: #262626;
   outline: none;
-}
-
-.credits {
-  margin-top: 50px;
-}
-
-.creditsTitle {
-  color: #262626;
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-  margin-bottom: 40px;
-}
-
-.credit {
-  color: #262626;
-  font-size: 1.2rem;
-  font-weight: normal;
-  letter-spacing: 1.5px;
-  margin-bottom: 20px;
-}
-
-.creditLink {
-  color: #262626;
-  text-decoration: underline;
-}
-
-.creditList {
-  font-size: 1.2rem;
-  height: 150px;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
 }
 
 .hideList {
