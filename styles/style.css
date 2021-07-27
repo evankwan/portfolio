@@ -1267,7 +1267,7 @@ section {
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 1.5px;
-  content: 'Hover on project for details';
+  content: "Hover on project for details";
   font-style: italic;
   text-align: center;
   text-transform: uppercase;
@@ -1352,7 +1352,7 @@ section {
 .projectPreview:hover > .projectDetails,
 .projectPreview:focus > .projectDetails,
 .projectFocused > .projectDetails {
-  opacity: .9;
+  opacity: 0.9;
   left: 0;
 }
 
@@ -1399,6 +1399,11 @@ section {
   letter-spacing: 1.2px;
   line-height: 1.4;
   margin-top: 20px;
+}
+
+.projectDetails .projectDescription .teamLink {
+  color: #61d58e;
+  text-decoration: underline;
 }
 
 .projectDetails .projectStack {
@@ -1513,7 +1518,7 @@ section {
 
 @media (max-width: 1024px) {
   .projectsGuide .projectsGuideText::after {
-    content: 'Click on project for details';
+    content: "Click on project for details";
   }
 }
 
