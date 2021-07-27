@@ -1226,8 +1226,9 @@ section {
   display: grid;
   -ms-grid-columns: (fit-content(calc($projectsCellSize / 2)))[2];
       grid-template-columns: repeat(2, fit-content(calc($projectsCellSize / 2)));
-  -ms-grid-rows: 100px (27vw)[4];
-      grid-template-rows: 100px repeat(4, 27vw);
+  -ms-grid-rows: 100px 450px;
+      grid-template-rows: 100px 450px;
+  grid-auto-rows: 450px;
   max-width: 100%;
   position: relative;
   width: calc(2 * $projectsCellSize);
