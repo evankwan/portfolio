@@ -1721,6 +1721,27 @@ section {
   margin-top: 50px;
 }
 
+@media (max-width: 768px) {
+  .skillContainer {
+    height: 120px;
+    margin: 5px;
+    width: 100px;
+  }
+  .skillIconContainer {
+    font-size: 5rem;
+  }
+  .fas {
+    font-size: 5rem;
+  }
+  .skillTitle {
+    font-size: 1.4rem;
+  }
+  .skillContainer:hover .skillIconContainer {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+
 .experience .sectionTitle {
   color: #f9f9f9;
 }
