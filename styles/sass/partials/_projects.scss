@@ -8,7 +8,8 @@
 .projectsContainer {
   display: grid;
   grid-template-columns: repeat(2, fit-content(calc($projectsCellSize / 2)));
-  grid-template-rows: 100px repeat(4, $projectsCellSize);
+  grid-template-rows: 100px 450px;
+  grid-auto-rows: 450px;
   max-width: 100%;
   position: relative;
   width: calc(2 * $projectsCellSize);
@@ -17,7 +18,7 @@
 
 .projectsGuide {
   @include setFlex(column, center, center);
-  
+
   background-color: $mainColor;
   background-position: top center;
   background-size: cover;
@@ -30,7 +31,7 @@
   .projectsGuideText::after {
     @include setFont(3rem, bold, $darkGrey, 1.5px);
 
-    content: 'Hover on project for details';
+    content: "Hover on project for details";
     font-style: italic;
     text-align: center;
     text-transform: uppercase;
@@ -49,7 +50,8 @@
 }
 
 .positiveVibesBoard {
-  background-image: url(../assets/positive-vibes-only.webp), url(../assets/positive-vibes-only.png);
+  background-image: url(../assets/positive-vibes-only.webp),
+    url(../assets/positive-vibes-only.png);
   background-position: top center;
   background-size: cover;
   border-right: 4px solid $white;
@@ -58,14 +60,16 @@
 }
 
 .pokemonBlackjack {
-  background-image: url(../assets/pokemon-blackjack.webp), url(../assets/pokemon-blackjack.png);
+  background-image: url(../assets/pokemon-blackjack.webp),
+    url(../assets/pokemon-blackjack.png);
   background-position: center center;
   background-size: cover;
   grid-area: 3 / 1 / span 2 / span 1;
 }
 
 .cratedigger {
-  background-image: url(../assets/cratedigger.webp), url(../assets/cratedigger.png);
+  background-image: url(../assets/cratedigger.webp),
+    url(../assets/cratedigger.png);
   background-position: center center;
   background-size: cover;
   border-right: 4px solid $white;
@@ -81,7 +85,8 @@
 }
 
 .scattergories {
-  background-image: url(../assets/scattergories.webp), url(../assets/scattergories.png);
+  background-image: url(../assets/scattergories.webp),
+    url(../assets/scattergories.png);
   background-position: top center;
   background-size: cover;
   border-bottom: 4px solid $white;
@@ -97,7 +102,7 @@
 .projectPreview:hover > .projectDetails,
 .projectPreview:focus > .projectDetails,
 .projectFocused > .projectDetails {
-  opacity: .9;
+  opacity: 0.9;
   left: 0;
 }
 
@@ -126,6 +131,11 @@
 
     line-height: 1.4;
     margin-top: 20px;
+
+    .teamLink {
+      color: $mainColor;
+      text-decoration: underline;
+    }
   }
 
   .projectStack {
@@ -219,13 +229,13 @@
 
 @media (max-width: 1024px) {
   .projectsGuide .projectsGuideText::after {
-    content: 'Click on project for details';
+    content: "Click on project for details";
   }
 }
 
 @media (max-width: 950px) {
   .projects .sectionWrapper {
-    left: 5%;;
+    left: 5%;
     overflow: hidden;
     width: 90%;
   }

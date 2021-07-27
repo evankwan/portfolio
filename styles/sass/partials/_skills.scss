@@ -25,7 +25,7 @@
 
   flex-basis: 80%;
   font-size: 7rem;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
   width: 80px;
 }
 
@@ -103,6 +103,34 @@
   color: $mernColor;
 }
 
+.skillTypeScript:hover {
+  color: $typescriptColor;
+}
+
 .skills .subSectionHeading {
   margin-top: 50px;
+}
+
+@media (max-width: 500px) {
+  .skillContainer {
+    height: 120px;
+    margin: 5px;
+    width: 100px;
+  }
+
+  .skillIconContainer {
+    font-size: 5rem;
+  }
+
+  .fas {
+    font-size: 5rem;
+  }
+
+  .skillTitle {
+    font-size: 1.4rem;
+  }
+
+  .skillContainer:hover .skillIconContainer {
+    transform: scale(1.15);
+  }
 }
