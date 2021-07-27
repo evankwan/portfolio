@@ -1721,7 +1721,7 @@ section {
   margin-top: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .skillContainer {
     height: 120px;
     margin: 5px;
