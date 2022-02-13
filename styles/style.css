@@ -1674,6 +1674,18 @@ section {
   color: #61dafb;
 }
 
+.skillGCP:hover {
+  color: #db4437;
+}
+
+.skillDocker:hover {
+  color: #007bff;
+}
+
+.skillVue:hover {
+  color: #35eb9a;
+}
+
 .skillFirebase:hover {
   color: #f58220;
 }

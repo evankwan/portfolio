@@ -13,3 +13,4 @@ What you can expect to see SOON:
 - tab order to skip navigation unless it's open
 - moving some sections around
 - paralax effects
+- better accessibility options
