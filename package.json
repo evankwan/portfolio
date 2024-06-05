@@ -12,6 +12,7 @@
     "sass:watch": "sass --watch styles/sass/style.scss styles/style.css --no-source-map"
   },
   "devDependencies": {
-    "sass": "^1.77.4"
+    "sass": "^1.77.4",
+    "typescript": "^5.4.5"
   }
 }
