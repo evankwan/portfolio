@@ -1,13 +1,23 @@
-@import './partials/setup';
-@import './partials/variables';
-@import './partials/mixins';
-@import './partials/global';
-@import './partials/utilities';
-@import './partials/header';
-@import './partials/nav';
-@import './partials/about';
-@import './partials/projects';
-@import './partials/skills';
-@import './partials/experience';
-@import './partials/blog';
-@import './partials/contact';
+body {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+}
+
+section {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
