@@ -10,5 +10,8 @@
   "scripts": {
     "sass": "sass styles/sass/style.scss styles/style.css --no-source-map",
     "sass:watch": "sass --watch styles/sass/style.scss styles/style.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.77.4"
   }
 }
