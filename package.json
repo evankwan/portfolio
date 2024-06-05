@@ -1,0 +1,13 @@
+{
+  "name": "@evankwan/portfolio",
+  "description": "Evan Kwan's professional portfolio",
+  "version": "0.0.0",
+  "author": {
+    "name": "Evan Kwan",
+    "url": "http://evankwan.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass --watch styles/sass/style.scss styles/style.css --no-source-map"
+  }
+}
