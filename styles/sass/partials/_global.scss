@@ -8,7 +8,7 @@ body {
   background-color: $white;
   font-family: "Merriweather Sans", sans-serif;
   transition: $standardTransition;
-  width: calc(100% - #{$navMenuWidth});
+  width: 100vw;
 }
 
 h1,
@@ -42,7 +42,7 @@ section {
 
 @media (max-width: 1200px) {
   body {
-    width: calc(100% - #{$navMenuWidth2});
+    width: 100vw;
   }
 }
 
