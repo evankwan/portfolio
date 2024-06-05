@@ -1,9 +1,4 @@
 .DS_STORE
-.pdf
-/Template
+node_modules
+
 .vscode
-unusedCopy.txt
-maple-leaf.svg
-tennis.svg
-wok.svg
-x-wing.svg
