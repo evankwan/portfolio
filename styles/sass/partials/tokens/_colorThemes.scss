@@ -1,0 +1,25 @@
+@mixin light-theme {
+  --main-background-color: #{$white};
+  --navbar-color: #{$darkGrey};
+  --hamburger-color: #{$mainColor};
+  --title-color: #{$darkGrey};
+  --title-accent-color: #{$mainColor};
+  --sub-title-color: #{$darkGrey};
+}
+
+@mixin dark-theme {
+  --main-background-color: #{$darkGrey};
+  --navbar-color: #{$mainColor};
+  --hamburger-color: #{$darkGrey};
+  --title-color: #{$white};
+  --title-accent-color: #{$mainColor};
+  --sub-title-color: #{$white};
+}
+
+.theme-light {
+  @include light-theme;
+}
+
+.theme-dark {
+  @include dark-theme;
+}

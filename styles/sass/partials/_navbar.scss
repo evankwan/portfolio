@@ -1,0 +1,97 @@
+nav {
+  width: 100%;
+  max-width: 100%;
+  height: $navbarHeight;
+
+  border-radius: $rounded;
+  overflow: hidden;
+
+  background-color: var(--navbar-color);
+  transition: $standardTransition;
+
+  &.toggled {
+    width: $navbarHeight;
+  }
+}
+
+.hamburger-container {
+  border-radius: $rounded;
+  position: relative;
+
+  .hamburger-toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $navbarHeight;
+    width: $navbarHeight;
+    display: inline-block;
+    opacity: 0;
+    z-index: 80;
+    
+    transition: $standardTransition;
+    cursor: pointer;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 60;
+
+  height: $navbarHeight;
+  width: $navbarHeight;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 calc(($navbarHeight - $hamburgerOtherLineLength) / 2);
+
+  .middle-line {
+    background-color: $darkGrey;
+    height: 5px;
+    position: relative;
+    transition: $standardTransition;
+    width: $hamburgerMiddleLineLength;
+
+    &::before,
+    &::after {
+      background-color: $darkGrey;
+      bottom: auto;
+      content: '';
+      height: $hamburgerLineWidth;
+      left: auto;
+      position: absolute;
+      right: auto;
+      top: auto;
+      transition: $standardTransition;
+      width: $hamburgerOtherLineLength;
+    }
+
+    &::before {
+      top: $hamburgerLineSpacing;
+    }
+
+    &::after {
+      bottom: $hamburgerLineSpacing;
+    }
+  }
+}
+
+.toggled-hamburger {
+  .middle-line {
+    width: $hamburgerToggledArrowLength;
+
+    &::before {
+      -webkit-transform: translate($hamburgerToggledTranslateX, $hamburgerToggledTranslateY) rotate(45deg);
+      transform: translate($hamburgerToggledTranslateX, $hamburgerToggledTranslateY) rotate(45deg);
+      width: $hamburgerToggledArrowTopLength;
+    }
+
+    &::after {
+      -webkit-transform: translate($hamburgerToggledTranslateX, -$hamburgerToggledTranslateY) rotate(-45deg);
+      transform: translate($hamburgerToggledTranslateX, -$hamburgerToggledTranslateY) rotate(-45deg);
+      width: $hamburgerToggledArrowTopLength;
+    }
+  }
+}

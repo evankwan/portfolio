@@ -1,24 +1,32 @@
 const app: any = {};
 
-app.elements = {};
-
 app.init = () => {
+  app.initColorScheme()
   app.initializeSelectors()
-  app.mountSidebar()
-  console.log("test")
+  app.initializeEventListeners()
+}
+
+app.initColorScheme = () => {
+  if (window.matchMedia('(prefers-color-scheme: light)')?.matches) {
+    document.body.classList.add('theme-light');
+    document.body.classList.remove('theme-dark');
+  } else {
+    document.body.classList.add('theme-dark');
+    document.body.classList.remove('theme-light');
+  }
 }
 
 app.initializeSelectors = () => {
-  app.elements.sidebarContainer = document.getElementById("navbarContainer");
+  app.$navbar = document.getElementById("navbar")
+  app.$hamburgerToggler = document.getElementById("hamburger-toggler")
+  app.$hamburger = document.getElementById("hamburger")
 }
 
-app.mountSidebar = async() => {
-  try {
-    const response = await fetch("http://127.0.0.1:5500/components/side-navigation-bar.html")
-    app.elements.sidebarContainer.innerHTML = await response.text()
-  } catch (e) {
-    console.error("Error fetching navigation sidebar")
-  }
+app.initializeEventListeners = () => {
+  app.$hamburgerToggler.addEventListener("click", () => {
+    app.$navbar.classList.toggle("toggled")
+    app.$hamburger.classList.toggle("toggled-hamburger")
+  })
 }
 
 app.init()

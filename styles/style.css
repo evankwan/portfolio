@@ -1,1 +1,203 @@
+.theme-light {
+  --main-background-color: #f9f9f9;
+  --navbar-color: #262626;
+  --hamburger-color: #61d58e;
+  --title-color: #262626;
+  --title-accent-color: #61d58e;
+  --sub-title-color: #262626;
+}
 
+.theme-dark {
+  --main-background-color: #262626;
+  --navbar-color: #61d58e;
+  --hamburger-color: #262626;
+  --title-color: #f9f9f9;
+  --title-accent-color: #61d58e;
+  --sub-title-color: #f9f9f9;
+}
+
+body {
+  background-color: var(--main-background-color);
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 0 2rem;
+}
+@media (max-width: 64rem) {
+  body {
+    padding: 0 1rem;
+  }
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+main {
+  min-height: calc(100vh - 4rem - 1rem);
+}
+
+.home-section {
+  width: 100%;
+  height: calc(100vh - 4rem - 1rem);
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.home-section .title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex-shrink: 0;
+}
+.home-section .title-container h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  margin: 0;
+  font-size: 6rem;
+  color: var(--title-color);
+  text-transform: uppercase;
+}
+.home-section .title-container h1 .accent-color {
+  color: var(--title-accent-color);
+}
+.home-section .title-container .sub-title-container {
+  border: 4px solid #f9f9f9;
+  padding: 0.5rem 2rem;
+  width: max-content;
+}
+.home-section .title-container h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--sub-title-color);
+  text-transform: lowercase;
+}
+
+.headshot-container {
+  border-radius: 9999px;
+  height: 20rem;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  width: 20rem;
+  flex-shrink: 0;
+}
+.headshot-container:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+.headshot-container img {
+  display: inline-block;
+  width: 100%;
+}
+
+@media (max-width: 48rem) {
+  .home-section {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 4rem;
+  }
+  .home-section .title-container {
+    margin-top: 3rem;
+    width: 100%;
+  }
+}
+@media (max-width: 30rem) {
+  .home-section .title-container h1 {
+    font-size: 3rem;
+  }
+  .home-section .title-container h2 {
+    font-size: 1rem;
+  }
+  .headshot-container {
+    height: 12.5rem;
+    width: 12.5rem;
+  }
+}
+nav {
+  width: 100%;
+  max-width: 100%;
+  height: 4rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: var(--navbar-color);
+  transition: 0.4s ease-in-out;
+}
+nav.toggled {
+  width: 4rem;
+}
+
+.hamburger-container {
+  border-radius: 9999px;
+  position: relative;
+}
+.hamburger-container .hamburger-toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 4rem;
+  display: inline-block;
+  opacity: 0;
+  z-index: 80;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 1rem;
+}
+.hamburger .middle-line {
+  background-color: #262626;
+  height: 5px;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  width: 1.5rem;
+}
+.hamburger .middle-line::before, .hamburger .middle-line::after {
+  background-color: #262626;
+  bottom: auto;
+  content: "";
+  height: 5px;
+  left: auto;
+  position: absolute;
+  right: auto;
+  top: auto;
+  transition: 0.4s ease-in-out;
+  width: 2rem;
+}
+.hamburger .middle-line::before {
+  top: -1rem;
+}
+.hamburger .middle-line::after {
+  bottom: -1rem;
+}
+
+.toggled-hamburger .middle-line {
+  width: 1.75rem;
+}
+.toggled-hamburger .middle-line::before {
+  -webkit-transform: translate(0.75rem, 0.65rem) rotate(45deg);
+  transform: translate(0.75rem, 0.65rem) rotate(45deg);
+  width: 1.25rem;
+}
+.toggled-hamburger .middle-line::after {
+  -webkit-transform: translate(0.75rem, -0.65rem) rotate(-45deg);
+  transform: translate(0.75rem, -0.65rem) rotate(-45deg);
+  width: 1.25rem;
+}

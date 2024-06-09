@@ -1,2 +1,10 @@
-@import "./partials/variables";
+@import "./partials/tokens/baseTokens";
+@import "./partials/tokens/breakPoints";
+@import "./partials/tokens/colorThemes";
+@import "./partials/tokens/textSizes";
+@import "./partials/tokens/variables";
+@import "./partials/tokens/sizing";
 @import "./partials/mixins";
+@import "./partials/body";
+@import "./partials/homeSection";
+@import "./partials/navbar";

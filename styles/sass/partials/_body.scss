@@ -1,0 +1,15 @@
+body {
+  background-color: var(--main-background-color);
+  font-family: 'Merriweather Sans', sans-serif;
+  padding: 0 2rem;
+
+  @media (max-width: $lgBreakpoint) {
+    padding: 0 1rem;
+  }
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
