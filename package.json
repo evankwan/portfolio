@@ -8,7 +8,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "",
+    "typecheck": "",
+    "ts": "tsc --watch true",
     "sass": "sass styles/sass/style.scss styles/style.css --no-source-map",
     "sass:watch": "sass --watch styles/sass/style.scss styles/style.css --no-source-map"
   },

@@ -1,0 +1,16 @@
+{
+  "include": ["scripts/typescript/**/*.ts"],
+  "exclude": [],
+  "compilerOptions": {
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "outDir": "scripts"
+  },
+  "watchOptions": {
+    "watchDirectory": "useFsEvents",
+    "excludeDirectories": [""],
+    "synchronousWatchDirectory": true
+  }
+}
