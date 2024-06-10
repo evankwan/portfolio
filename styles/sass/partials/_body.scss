@@ -1,15 +1,17 @@
 body {
   background-color: var(--main-background-color);
   font-family: 'Merriweather Sans', sans-serif;
-  padding: 0 2rem;
+  padding: $bodyVerticalPadding 2rem;
 
   @media (max-width: $lgBreakpoint) {
-    padding: 0 1rem;
+    padding: $bodyVerticalPadding 1rem;
   }
 }
 
 .main-container {
   width: 100%;
   max-width: 1100px;
+  height: $screenSizeMinusNavbar;
+  min-height: $screenSizeMinusNavbar;
   margin: 0 auto;
 }

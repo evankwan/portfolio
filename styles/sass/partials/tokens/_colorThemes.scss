@@ -5,6 +5,7 @@
   --title-color: #{$darkGrey};
   --title-accent-color: #{$mainColor};
   --sub-title-color: #{$darkGrey};
+  --navbar-link-color: #{$mainColor};
 }
 
 @mixin dark-theme {
@@ -14,6 +15,7 @@
   --title-color: #{$white};
   --title-accent-color: #{$mainColor};
   --sub-title-color: #{$white};
+  --navbar-link-color: #{$darkGrey};
 }
 
 .theme-light {

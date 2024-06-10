@@ -5,6 +5,7 @@
   --title-color: #262626;
   --title-accent-color: #61d58e;
   --sub-title-color: #262626;
+  --navbar-link-color: #61d58e;
 }
 
 .theme-dark {
@@ -14,33 +15,36 @@
   --title-color: #f9f9f9;
   --title-accent-color: #61d58e;
   --sub-title-color: #f9f9f9;
+  --navbar-link-color: #262626;
 }
 
 body {
   background-color: var(--main-background-color);
   font-family: "Merriweather Sans", sans-serif;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
 @media (max-width: 64rem) {
   body {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 }
 
 .main-container {
   width: 100%;
   max-width: 1100px;
+  height: calc(100vh - 4rem - 1rem - 1rem);
+  min-height: calc(100vh - 4rem - 1rem - 1rem);
   margin: 0 auto;
 }
 
 main {
-  min-height: calc(100vh - 4rem - 1rem);
+  min-height: calc(100vh - 4rem - 1rem - 1rem);
 }
 
 .home-section {
   width: 100%;
-  height: calc(100vh - 4rem - 1rem);
   min-width: 100%;
+  height: calc(100vh - 4rem - 1rem - 1rem);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -123,6 +127,10 @@ nav {
   width: 100%;
   max-width: 100%;
   height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-itmes: center;
   border-radius: 9999px;
   overflow: hidden;
   background-color: var(--navbar-color);
@@ -200,4 +208,22 @@ nav.toggled {
   -webkit-transform: translate(0.75rem, -0.65rem) rotate(-45deg);
   transform: translate(0.75rem, -0.65rem) rotate(-45deg);
   width: 1.25rem;
+}
+
+.nav-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 4rem;
+  list-style: none;
+}
+.nav-links-container button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--navbar-link-color);
+  cursor: pointer;
 }

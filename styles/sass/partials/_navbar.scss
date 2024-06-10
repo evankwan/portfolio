@@ -3,6 +3,11 @@ nav {
   max-width: 100%;
   height: $navbarHeight;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-itmes: center;
+
   border-radius: $rounded;
   overflow: hidden;
 
@@ -93,5 +98,26 @@ nav {
       transform: translate($hamburgerToggledTranslateX, -$hamburgerToggledTranslateY) rotate(-45deg);
       width: $hamburgerToggledArrowTopLength;
     }
+  }
+}
+
+.nav-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+
+  margin-left: 4rem;
+
+  list-style: none;
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: $navbarLinkSize;
+    font-weight: bold;
+    color: var(--navbar-link-color);
+    cursor: pointer;
   }
 }

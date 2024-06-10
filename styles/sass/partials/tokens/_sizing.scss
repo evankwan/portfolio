@@ -1,4 +1,6 @@
+$bodyVerticalPadding: 1rem;
 $navbarHeight: 4rem;
+$screenSizeMinusNavbar: calc(100vh - $navbarHeight - 1rem - $bodyVerticalPadding);
 
 $hamburgerMiddleLineLength: 1.5rem;
 $hamburgerOtherLineLength: 2rem;
