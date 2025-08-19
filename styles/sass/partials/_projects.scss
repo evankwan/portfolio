@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use './mixins' as *;
+
 .projects .sectionWrapper {
   overflow: hidden;
   position: relative;

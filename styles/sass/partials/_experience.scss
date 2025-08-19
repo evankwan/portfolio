@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use './mixins' as *;
+
 .experience .sectionTitle {
   color: $white;
 }

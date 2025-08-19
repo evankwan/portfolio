@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use './mixins' as *;
+
 .resumeBreak {
   background-color: $mainColor;
   border-radius: 50px;

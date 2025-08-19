@@ -1,7 +1,9 @@
 {
     "scripts": {
         "dev": "tsc --watch",
-        "build": "npx esbuild src/*.ts src/**/*.ts --outdir=scripts --minify --format=esm"
+        "build:ts": "npx esbuild src/*.ts src/**/*.ts --outdir=scripts --minify --format=esm",
+        "build:css": "npx sass styles/sass:styles --no-source-map",
+        "build": "npm run build:css && npm run build:ts"
     },
     "dependencies": {
         "typescript": "^5.9.2"

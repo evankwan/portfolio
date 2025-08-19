@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use './mixins' as *;
+
 .skillsContainer {
   @include setFlex(row, center, center);
 

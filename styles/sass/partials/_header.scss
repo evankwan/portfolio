@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use './mixins' as *;
+
 .mainHeader {
   background-color: $mainColor;
   width: 100%;
