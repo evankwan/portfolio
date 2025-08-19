@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "dev": "tsc --watch",
+        "build": "npx esbuild src/*.ts src/**/*.ts --outdir=scripts --minify --format=esm"
+    },
+    "dependencies": {
+        "typescript": "^5.9.2"
+    },
+    "devDependencies": {
+        "esbuild": "0.25.8"
+    }
+}
