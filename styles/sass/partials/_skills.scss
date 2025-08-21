@@ -110,6 +110,54 @@
   color: $typescriptColor;
 }
 
+.skillTailwind {
+  color: black;
+
+  &:hover {
+    color: $tailwindColor;
+  }
+}
+
+.skillVue:hover {
+  color: $vueColor;
+}
+
+.skillNode:hover {
+  color: $nodeColor;
+}
+
+.skillVitest:hover {
+  color: $vitestColor;
+}
+
+.skillCypress:hover {
+  color: $cypressColor;
+}
+
+.skillVite:hover {
+  color: $viteColor;
+}
+
+.skillWebpack:hover {
+  color: $webpackColor;
+}
+
+.skillDocker:hover {
+  color: $dockerColor;
+}
+
+.skillTerraform:hover {
+  color: $terraformColor;
+}
+
+.skillGCP:hover {
+  color: $gcpColor;
+}
+
+.skillPython:hover {
+  color: $pythonColor;
+}
+
 .skills .subSectionHeading {
   margin-top: 50px;
 }

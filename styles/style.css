@@ -432,7 +432,7 @@ section {
 
 .pageTitle {
   color: #262626;
-  font-size: 12rem;
+  font-size: 10rem;
   font-weight: 800;
   letter-spacing: 1.2px;
   font-family: "Archivo Black", sans-serif;
@@ -1018,7 +1018,7 @@ section {
 
 .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(2, fit-content(13.5vw));
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 100px 450px;
   grid-auto-rows: 450px;
   max-width: 100%;
@@ -1391,6 +1391,53 @@ section {
 
 .skillTypeScript:hover {
   color: #007acc;
+}
+
+.skillTailwind {
+  color: black;
+}
+.skillTailwind:hover {
+  color: #38bdf8;
+}
+
+.skillVue:hover {
+  color: #41b883;
+}
+
+.skillNode:hover {
+  color: #5fa04e;
+}
+
+.skillVitest:hover {
+  color: #FCC72B;
+}
+
+.skillCypress:hover {
+  color: #69d3a7;
+}
+
+.skillVite:hover {
+  color: #bd34fe;
+}
+
+.skillWebpack:hover {
+  color: #1c78c0;
+}
+
+.skillDocker:hover {
+  color: #019BC6;
+}
+
+.skillTerraform:hover {
+  color: #5c4ee5;
+}
+
+.skillGCP:hover {
+  color: #ea4535;
+}
+
+.skillPython:hover {
+  color: #5A9FD4;
 }
 
 .skills .subSectionHeading {

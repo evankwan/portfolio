@@ -16,7 +16,7 @@
 }
 
 .pageTitle {
-  @include setFont(12rem, 800, $darkGrey, 1.2px);
+  @include setFont(10rem, 800, $darkGrey, 1.2px);
 
   font-family: 'Archivo Black', sans-serif;
   z-index: 20;

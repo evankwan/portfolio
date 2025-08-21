@@ -1,11 +1,13 @@
 {
     "scripts": {
-        "dev": "tsc --watch",
+        "dev": "concurrently \"npm run watch:css\" \"tsc --watch\"",
         "build:ts": "npx esbuild src/*.ts src/**/*.ts --outdir=scripts --minify --format=esm",
         "build:css": "npx sass styles/sass:styles --no-source-map",
-        "build": "npm run build:css && npm run build:ts"
+        "build": "npm run build:css && npm run build:ts",
+        "watch:css": "npx sass --watch styles/sass:styles --no-source-map"
     },
     "dependencies": {
+        "concurrently": "^9.2.0",
         "typescript": "^5.9.2"
     },
     "devDependencies": {

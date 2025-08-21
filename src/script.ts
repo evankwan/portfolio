@@ -1,7 +1,6 @@
 const app = {
   selectors: {
     creditsList: null,
-    creditsTitle: null,
     currentPageNumber: null,
     hamburger: null,
     hamburgerContainer: null,
@@ -17,10 +16,10 @@ const app = {
     app.initSelectors();
     app.changePageNumber();
     app.initEventListeners();
+    console.log("init")
   },
   initSelectors: () => {
     app.selectors.creditsList = document.getElementById('creditList');
-    app.selectors.creditsTitle = document.getElementById('creditsTitle');
     app.selectors.currentPageNumber = document.getElementById('currentPageNumber');
     app.selectors.hamburger = document.getElementById('hamburger');
     app.selectors.hamburgerContainer = document.getElementById('hamburgerContainer');
@@ -61,10 +60,6 @@ const app = {
           app.selectors.navMenu.classList.toggle('showMenu');
         }
       })
-    })
-  
-    app.selectors.creditsTitle.addEventListener('click', () => {
-      app.selectors.creditsList.classList.toggle('hideList');
     })
   },
 
