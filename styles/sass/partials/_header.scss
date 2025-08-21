@@ -59,17 +59,19 @@
   }
 }
 
-.scrollArrowContainer {
-  bottom: 100px;
-  left: 8px;
-  position: absolute;
-  transition: $standardTransition;
-  z-index: 20;
-
-  .scrollArrow {
-    animation: slideDown 2s linear infinite;
-    font-size: 5rem;
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
   }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+.waveEmojiAnimation:hover {
+  animation: shake linear 2s infinite;
 }
 
 @media (max-width: 1200px) {
@@ -106,9 +108,6 @@
     font-size: 6rem;
     text-align: center;
     width: 100%;
-  }
-  .scrollArrowContainer {
-    left: calc(50% - 25px);
   }
 }
 
